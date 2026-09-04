@@ -1,0 +1,16 @@
+{
+  "name": "govinda-portfolio",
+  "version": "1.0.0",
+  "description": "Govinda Das - Software & MERN Full-Stack Engineer Portfolio",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "build": "npm install"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
