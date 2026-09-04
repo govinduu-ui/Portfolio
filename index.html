@@ -1,0 +1,1963 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Govinda Das — Software & MERN Full-Stack Engineer Portfolio</title>
+  <meta name="description" content="Portfolio of Govinda Das, B.Tech Computer Science Student & MERN Full-Stack Engineer specializing in React.js, Node.js, Express.js, MongoDB, and Python software systems." />
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface": "#111317",
+            "surface-dim": "#111317",
+            "surface-bright": "#37393d",
+            "surface-container-lowest": "#0c0e11",
+            "surface-container-low": "#1a1c1f",
+            "surface-container": "#1e2023",
+            "surface-container-high": "#282a2d",
+            "surface-container-highest": "#333538",
+            "surface-variant": "#333538",
+            "on-surface": "#e2e2e6",
+            "on-surface-variant": "#bbcabf",
+            "inverse-surface": "#e2e2e6",
+            "inverse-on-surface": "#2f3034",
+            "outline": "#86948a",
+            "outline-variant": "#3c4a42",
+            "primary": "#4edea3",
+            "primary-container": "#10b981",
+            "primary-fixed": "#6ffbbe",
+            "primary-fixed-dim": "#4edea3",
+            "on-primary": "#003824",
+            "on-primary-container": "#00422b",
+            "on-primary-fixed": "#002113",
+            "on-primary-fixed-variant": "#005236",
+            "inverse-primary": "#006c49",
+            "secondary": "#7bd0ff",
+            "secondary-container": "#00a6e0",
+            "secondary-fixed": "#c4e7ff",
+            "secondary-fixed-dim": "#7bd0ff",
+            "on-secondary": "#00354a",
+            "on-secondary-container": "#00374d",
+            "on-secondary-fixed": "#001e2c",
+            "on-secondary-fixed-variant": "#004c69",
+            "tertiary": "#c4c6cd",
+            "tertiary-container": "#a1a3a9",
+            "tertiary-fixed": "#e1e2e9",
+            "tertiary-fixed-dim": "#c4c6cd",
+            "on-tertiary": "#2e3136",
+            "on-tertiary-container": "#36393f",
+            "on-tertiary-fixed": "#191c21",
+            "on-tertiary-fixed-variant": "#44474c",
+            "error": "#ffb4ab",
+            "error-container": "#93000a",
+            "on-error": "#690005",
+            "on-error-container": "#ffdad6",
+            "background": "#111317",
+            "on-background": "#e2e2e6"
+          },
+          borderRadius: {
+            DEFAULT: "0.125rem",
+            lg: "0.25rem",
+            xl: "0.5rem",
+            full: "0.75rem"
+          },
+          spacing: {
+            "space-2xs": "0.125rem",
+            "space-xs": "0.25rem",
+            "space-sm": "0.5rem",
+            "space-md": "0.75rem",
+            "space-base": "1rem",
+            "space-lg": "1.5rem",
+            "space-xl": "2rem",
+            "space-2xl": "3rem",
+            "space-3xl": "4rem",
+            "gutter-mobile": "1rem",
+            "gutter-desktop": "1.5rem",
+            "max-content-width": "72rem"
+          },
+          fontFamily: {
+            display: ["Space Grotesk", "sans-serif"],
+            "headline-lg": ["Space Grotesk", "sans-serif"],
+            "headline-md": ["Space Grotesk", "sans-serif"],
+            "headline-sm": ["Space Grotesk", "sans-serif"],
+            "body-lg": ["Inter", "sans-serif"],
+            "body-md": ["Inter", "sans-serif"],
+            "body-sm": ["Inter", "sans-serif"],
+            "mono-md": ["JetBrains Mono", "monospace"],
+            "mono-sm": ["JetBrains Mono", "monospace"],
+            "label-code": ["JetBrains Mono", "monospace"]
+          },
+          fontSize: {
+            display: ["48px", { lineHeight: "56px", letterSpacing: "-0.03em", fontWeight: "600" }],
+            "headline-lg": ["32px", { lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "600" }],
+            "headline-md": ["22px", { lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "500" }],
+            "headline-sm": ["18px", { lineHeight: "24px", letterSpacing: "0em", fontWeight: "500" }],
+            "body-lg": ["16px", { lineHeight: "26px", letterSpacing: "-0.01em", fontWeight: "400" }],
+            "body-md": ["14px", { lineHeight: "22px", letterSpacing: "0em", fontWeight: "400" }],
+            "body-sm": ["13px", { lineHeight: "18px", letterSpacing: "0em", fontWeight: "400" }],
+            "mono-md": ["13px", { lineHeight: "20px", letterSpacing: "-0.01em", fontWeight: "500" }],
+            "mono-sm": ["11px", { lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "500" }],
+            "label-code": ["12px", { lineHeight: "18px", letterSpacing: "0em", fontWeight: "400" }]
+          }
+        }
+      }
+    };
+  </script>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-surface font-body-md text-body-md text-on-surface antialiased min-h-screen flex flex-col justify-between selection:bg-primary selection:text-on-primary">
+
+  <!-- HEADER / FIXED NAVBAR -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/80 backdrop-blur-md border-b border-outline-variant/30 transition-all duration-200">
+    <div class="h-16 max-w-max-content-width mx-auto px-gutter-mobile lg:px-gutter-desktop flex items-center justify-between">
+      <div class="flex items-center gap-space-md">
+        <a class="font-headline-sm text-headline-sm font-bold tracking-tight text-on-surface hover:text-primary transition-colors duration-150" href="#hero">GOVINDA DAS</a>
+      </div>
+
+      <nav class="hidden lg:flex items-center gap-space-lg" id="desktop-nav">
+        <a class="nav-link font-mono-md text-mono-md text-primary font-medium transition-colors duration-150" href="#hero" data-section="hero">About</a>
+        <a class="nav-link font-mono-md text-mono-md text-on-surface-variant hover:text-on-surface transition-colors duration-150" href="#background" data-section="background">Background</a>
+        <a class="nav-link font-mono-md text-mono-md text-on-surface-variant hover:text-on-surface transition-colors duration-150" href="#education" data-section="education">Education</a>
+        <a class="nav-link font-mono-md text-mono-md text-on-surface-variant hover:text-on-surface transition-colors duration-150" href="#skills" data-section="skills">Skills</a>
+        <a class="nav-link font-mono-md text-mono-md text-on-surface-variant hover:text-on-surface transition-colors duration-150" href="#projects" data-section="projects">Projects</a>
+        <a class="nav-link font-mono-md text-mono-md text-on-surface-variant hover:text-on-surface transition-colors duration-150" href="#certifications" data-section="certifications">Certifications</a>
+        <a class="nav-link font-mono-md text-mono-md text-on-surface-variant hover:text-on-surface transition-colors duration-150" href="#contact" data-section="contact">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-space-md">
+        <button id="open-resume-btn" class="inline-flex items-center gap-space-2xs px-space-md py-space-xs font-mono-md text-mono-md text-on-surface bg-surface-container-low border border-outline-variant hover:border-primary hover:text-primary rounded transition-all duration-150">
+          <span>Resume</span>
+          <span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+        </button>
+        <button id="profile-avatar-btn" class="w-8 h-8 rounded-full overflow-hidden border border-primary/60 shrink-0 hover:ring-2 hover:ring-primary/50 transition-all cursor-pointer" title="View Quick Profile Summary">
+          <img src="profile.jpg" alt="Govinda Das" class="w-full h-full object-cover" />
+        </button>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-toggle" class="lg:hidden p-space-xs text-on-surface hover:text-primary focus:outline-none" aria-label="Toggle navigation menu">
+          <span class="material-symbols-outlined text-[24px]" id="menu-icon">menu</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Navigation -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-surface-container-lowest border-b border-outline-variant/30 px-gutter-mobile py-space-md flex flex-col gap-space-md">
+      <a class="mobile-nav-link font-mono-md text-mono-md text-primary font-medium py-space-2xs" href="#hero">About</a>
+      <a class="mobile-nav-link font-mono-md text-mono-md text-on-surface-variant hover:text-on-surface py-space-2xs" href="#background">Background</a>
+      <a class="mobile-nav-link font-mono-md text-mono-md text-on-surface-variant hover:text-on-surface py-space-2xs" href="#education">Education</a>
+      <a class="mobile-nav-link font-mono-md text-mono-md text-on-surface-variant hover:text-on-surface py-space-2xs" href="#skills">Skills</a>
+      <a class="mobile-nav-link font-mono-md text-mono-md text-on-surface-variant hover:text-on-surface py-space-2xs" href="#projects">Projects</a>
+      <a class="mobile-nav-link font-mono-md text-mono-md text-on-surface-variant hover:text-on-surface py-space-2xs" href="#certifications">Certifications</a>
+      <a class="mobile-nav-link font-mono-md text-mono-md text-on-surface-variant hover:text-on-surface py-space-2xs" href="#contact">Contact</a>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main class="w-full pt-16 bg-surface flex-1">
+    <div class="max-w-max-content-width mx-auto px-gutter-mobile lg:px-gutter-desktop py-space-xl space-y-space-3xl">
+
+      <!-- SECTION 01: HERO / IDENTITY & TRAJECTORY -->
+      <section id="hero" class="relative w-full pt-space-md pb-space-xl scroll-mt-20">
+        <!-- Ambient Grid Backdrop -->
+        <div class="absolute inset-0 pointer-events-none opacity-20">
+          <svg class="w-full h-full" height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <pattern id="grid-pattern" width="48" height="48" patternUnits="userSpaceOnUse">
+                <path d="M 48 0 L 0 0 0 48" fill="none" stroke="#333538" stroke-width="0.75"></path>
+                <circle cx="0" cy="0" r="1" fill="#4edea3" opacity="0.4"></circle>
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#grid-pattern)"></rect>
+          </svg>
+        </div>
+
+        <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-space-xl lg:gap-space-2xl items-center">
+          <!-- Left Column: Identity & Bio (7 cols) -->
+          <div class="lg:col-span-7 flex flex-col items-start">
+            <!-- Developer Profile Photo Card -->
+            <div class="flex items-center gap-space-md mb-space-lg p-space-sm pr-space-lg rounded-2xl bg-surface-container-low/90 border border-outline-variant/50 shadow-md">
+              <div class="relative w-16 h-16 sm:w-20 sm:h-20 rounded-xl overflow-hidden border-2 border-primary/60 shrink-0 group shadow-inner">
+                <img src="profile.jpg" alt="Govinda Das Profile" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300" />
+                <div class="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-xl"></div>
+              </div>
+              <div class="flex flex-col">
+                <div class="flex items-center gap-space-xs">
+                  <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                  <span class="font-headline-sm text-headline-sm font-bold text-on-surface">Govinda Das</span>
+                </div>
+                <span class="font-mono-sm text-mono-sm text-primary font-medium tracking-wide">SOFTWARE & MERN FULL-STACK ENGINEER</span>
+                <span class="font-mono-sm text-mono-sm text-on-surface-variant">B.Tech Computer Science • VIT Bhopal</span>
+              </div>
+            </div>
+
+            <div class="inline-flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg bg-surface-container-low border border-outline-variant/40 mb-space-lg shadow-sm">
+              <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+              <span class="font-mono-sm text-mono-sm text-on-surface-variant uppercase tracking-wider">
+                COMPUTER SCIENCE STUDENT • MERN FULL-STACK ENGINEER
+              </span>
+              <span class="text-outline-variant font-mono-sm">/</span>
+              <span class="font-mono-sm text-mono-sm text-primary font-medium">VIT BHOPAL</span>
+            </div>
+
+            <h1 class="font-display text-display font-semibold text-on-surface tracking-tight mb-space-md text-balance">
+              Building scalable, performant, and user-focused web applications.
+            </h1>
+
+            <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-space-xl leading-relaxed">
+              B.Tech Computer Science student specializing in modern web architectures, MERN full-stack development (React, Node, Express, MongoDB), and Python software systems.
+            </p>
+
+            <div class="flex flex-wrap items-center gap-space-md w-full sm:w-auto mb-space-xl">
+              <a href="#projects" class="group relative inline-flex items-center justify-center gap-space-xs px-space-lg py-space-md rounded-lg bg-on-surface text-surface-container-lowest font-mono-md text-mono-md font-semibold transition-all duration-150 hover:bg-white hover:-translate-y-0.5 shadow-md">
+                <span>View Selected Projects</span>
+                <span class="material-symbols-outlined text-[16px] transition-transform duration-150 group-hover:translate-y-0.5">arrow_downward</span>
+              </a>
+              <button id="hero-resume-trigger" class="inline-flex items-center justify-center gap-space-xs px-space-lg py-space-md rounded-lg bg-surface-container-low border border-outline-variant/60 text-on-surface font-mono-md text-mono-md transition-all duration-150 hover:border-secondary hover:text-secondary hover:bg-surface-container shadow-sm">
+                <span>View Technical Resume</span>
+                <span class="material-symbols-outlined text-[15px] text-secondary">north_east</span>
+              </button>
+            </div>
+
+            <!-- Live Status Card -->
+            <div class="w-full max-w-xl rounded-xl bg-surface-container-lowest/90 border border-outline-variant/40 p-space-md flex items-center justify-between shadow-sm">
+              <div class="flex items-center gap-space-sm min-w-0">
+                <span class="text-primary font-mono-sm text-mono-sm font-semibold">⚡</span>
+                <span class="font-mono-md text-mono-md text-on-surface truncate">
+                  Open for SWE & MERN Full-Stack Development Roles
+                </span>
+              </div>
+              <span class="shrink-0 font-mono-sm text-mono-sm text-on-surface-variant/80 pl-space-sm">
+                (VIT BHOPAL)
+              </span>
+            </div>
+
+            <!-- Metric Micro-Strip -->
+            <div class="mt-space-lg grid grid-cols-3 gap-space-lg pt-space-md border-t border-outline-variant/20 w-full max-w-xl">
+              <div>
+                <div class="font-mono-sm text-mono-sm text-on-surface-variant uppercase">Academic GPA</div>
+                <div class="font-headline-sm text-headline-sm text-on-surface font-medium mt-space-2xs">8.23 / 10</div>
+              </div>
+              <div>
+                <div class="font-mono-sm text-mono-sm text-on-surface-variant uppercase">Core Stack</div>
+                <div class="font-headline-sm text-headline-sm text-primary font-medium mt-space-2xs">MERN & Python</div>
+              </div>
+              <div>
+                <div class="font-mono-sm text-mono-sm text-on-surface-variant uppercase">Architecture</div>
+                <div class="font-headline-sm text-headline-sm text-secondary font-medium mt-space-2xs">REST APIs</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Pipeline Architecture Terminal (5 cols) -->
+          <div class="lg:col-span-5 w-full">
+            <div class="rounded-xl bg-surface-container-lowest border border-outline-variant/50 shadow-xl overflow-hidden relative">
+              <!-- Terminal Header Bar -->
+              <div class="h-10 px-space-md bg-surface-container-low border-b border-outline-variant/30 flex items-center justify-between">
+                <div class="flex items-center gap-space-xs">
+                  <span class="w-2.5 h-2.5 rounded-full bg-outline-variant/60"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-outline-variant/60"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-outline-variant/60"></span>
+                  <span class="ml-space-xs font-mono-sm text-mono-sm text-on-surface-variant/90">web_architecture.sys</span>
+                </div>
+                <div class="flex items-center gap-space-xs font-mono-sm text-mono-sm text-primary">
+                  <span class="inline-block w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>
+                  <span>LIVE REPLAY</span>
+                </div>
+              </div>
+
+              <!-- Pipeline Diagram Body -->
+              <div class="p-space-lg flex flex-col items-center relative">
+                <!-- Telemetry Bar -->
+                <div class="w-full mb-space-lg flex items-center justify-between p-space-xs px-space-sm rounded bg-surface-container border border-outline-variant/30 font-mono-sm text-mono-sm">
+                  <span class="text-on-surface-variant">ROUTE: <span class="text-on-surface">/api/v1/app/status</span></span>
+                  <span class="text-primary font-medium" id="hero-telemetry-status">200 OK • OPERATIONAL</span>
+                </div>
+
+                <!-- Pipeline Node 1: Client Layer -->
+                <div class="pipeline-node w-full rounded-lg bg-surface-container border border-outline-variant/60 p-space-md transition-all duration-200 hover:border-secondary cursor-pointer" id="node-client" data-node="React.js Frontend (Responsive UI / Single Page App)">
+                  <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-space-sm">
+                      <span class="material-symbols-outlined text-secondary text-[18px]">devices</span>
+                      <div>
+                        <div class="font-mono-md text-mono-md text-on-surface font-semibold">React.js Client Interface</div>
+                        <div class="font-mono-sm text-mono-sm text-on-surface-variant">Responsive UI • State Engine</div>
+                      </div>
+                    </div>
+                    <div class="text-right">
+                      <div class="font-mono-sm text-mono-sm text-secondary">frontend: React</div>
+                      <div class="font-mono-sm text-mono-sm text-on-surface-variant">status: 200 OK</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Connector 1 -->
+                <div class="h-8 flex flex-col items-center justify-center relative w-full">
+                  <div class="w-px h-full bg-outline-variant/60"></div>
+                  <span class="material-symbols-outlined text-outline-variant text-[14px] -mt-2 bg-surface-container-lowest">south</span>
+                </div>
+
+                <!-- Pipeline Node 2: Node / Express REST API -->
+                <div class="pipeline-node w-full rounded-lg bg-surface-container border border-outline-variant/60 p-space-md transition-all duration-200 hover:border-primary cursor-pointer" id="node-asgi" data-node="Node.js & Express.js Backend REST Server">
+                  <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-space-sm">
+                      <span class="material-symbols-outlined text-primary text-[18px]">terminal</span>
+                      <div>
+                        <div class="font-mono-md text-mono-md text-on-surface font-semibold">Node.js / Express Runtime</div>
+                        <div class="font-mono-sm text-mono-sm text-on-surface-variant">RESTful API • Middleware Router</div>
+                      </div>
+                    </div>
+                    <div class="text-right">
+                      <div class="font-mono-sm text-mono-sm text-primary">stack: Express</div>
+                      <div class="font-mono-sm text-mono-sm text-on-surface-variant">async I/O</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Connector 2 -->
+                <div class="h-8 flex flex-col items-center justify-center relative w-full">
+                  <div class="w-px h-full bg-outline-variant/60"></div>
+                  <span class="material-symbols-outlined text-outline-variant text-[14px] -mt-2 bg-surface-container-lowest">south</span>
+                </div>
+
+                <!-- Pipeline Node 3: Python Data Engine -->
+                <div class="pipeline-node w-full rounded-lg bg-surface-container border border-outline-variant/60 p-space-md transition-all duration-200 hover:border-secondary cursor-pointer" id="node-django" data-node="Python Data Inspection & Request Analyzer Engine">
+                  <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-space-sm">
+                      <span class="material-symbols-outlined text-secondary text-[18px]">code</span>
+                      <div>
+                        <div class="font-mono-md text-mono-md text-on-surface font-semibold">Python Request Inspector</div>
+                        <div class="font-mono-sm text-mono-sm text-on-surface-variant">Automated Testing & Parsing</div>
+                      </div>
+                    </div>
+                    <div class="text-right">
+                      <div class="font-mono-sm text-mono-sm text-secondary">Python 3</div>
+                      <div class="font-mono-sm text-mono-sm text-on-surface-variant">analysis engine</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Connector 3 -->
+                <div class="h-8 flex flex-col items-center justify-center relative w-full">
+                  <div class="w-px h-full bg-outline-variant/60"></div>
+                  <span class="material-symbols-outlined text-outline-variant text-[14px] -mt-2 bg-surface-container-lowest">south</span>
+                </div>
+
+                <!-- Pipeline Node 4: Database -->
+                <div class="pipeline-node w-full rounded-lg bg-surface-container border border-primary/40 p-space-md transition-all duration-200 cursor-pointer bg-surface-container/80" id="node-db" data-node="MongoDB Document Store & Persistence Layer">
+                  <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-space-sm">
+                      <span class="material-symbols-outlined text-primary text-[18px]">database</span>
+                      <div>
+                        <div class="font-mono-md text-mono-md text-on-surface font-semibold">MongoDB Database Tier</div>
+                        <div class="font-mono-sm text-mono-sm text-on-surface-variant">Document Schemas • REST Integration</div>
+                      </div>
+                    </div>
+                    <div class="text-right">
+                      <div class="font-mono-sm text-mono-sm text-primary">nosql: active</div>
+                      <div class="font-mono-sm text-mono-sm text-on-surface-variant">persisted</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Live Trace Output -->
+                <div class="w-full mt-space-md p-space-sm rounded bg-surface-container-low border border-outline-variant/30">
+                  <div class="flex items-center justify-between font-mono-sm text-mono-sm text-on-surface-variant">
+                    <span class="text-on-surface">TRACE ID: <span class="text-primary font-semibold" id="trace-id">trc_9a4f21</span></span>
+                    <span class="text-outline" id="trace-inspector-msg">status: nominal</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Micro Visualizer Footer -->
+              <div class="px-space-md py-space-xs bg-surface-container border-t border-outline-variant/20 flex items-center justify-between">
+                <div class="flex items-center gap-space-xs">
+                  <span class="w-1 h-3 bg-primary rounded-full"></span>
+                  <span class="w-1 h-2 bg-primary/60 rounded-full"></span>
+                  <span class="w-1 h-4 bg-primary/90 rounded-full"></span>
+                  <span class="w-1 h-1.5 bg-primary/40 rounded-full"></span>
+                  <span class="font-mono-sm text-mono-sm text-on-surface-variant ml-space-xs">System Telemetry Monitor</span>
+                </div>
+                <span class="font-mono-sm text-mono-sm text-on-surface-variant">MERN Environment Active</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 02: BACKGROUND / ABOUT -->
+      <section id="background" class="w-full relative py-space-xl scroll-mt-20">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl lg:gap-space-2xl items-start">
+          <!-- Left Column -->
+          <div class="lg:col-span-5 flex flex-col gap-space-xl">
+            <div class="flex items-center gap-space-sm">
+              <span class="font-mono-sm text-mono-sm uppercase tracking-widest text-primary px-space-xs py-space-2xs bg-surface-container rounded">
+                02 / BACKGROUND
+              </span>
+              <span class="h-1.5 w-1.5 rounded-full bg-primary animate-ping"></span>
+            </div>
+
+            <div class="space-y-space-md">
+              <h2 class="font-display text-display text-on-surface tracking-tight leading-[1.08] font-bold">
+                Building modern web apps.<br/>
+                <span class="text-on-surface-variant">Engineering full-stack code.</span><br/>
+                Solving practical problems.
+              </h2>
+            </div>
+
+            <div class="p-space-lg bg-surface-container-low rounded-xl shadow-md relative overflow-hidden group">
+              <div class="absolute -top-12 -right-12 w-32 h-32 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/10 transition-all duration-300 pointer-events-none"></div>
+              <div class="flex gap-space-md items-start">
+                <span class="material-symbols-outlined text-primary text-[28px] shrink-0">format_quote</span>
+                <div class="space-y-space-xs">
+                  <p class="font-headline-sm text-headline-sm text-on-surface italic font-normal leading-snug">
+                    “Great web software balances intuitive user experience with clean, maintainable architecture and robust data modeling.”
+                  </p>
+                  <div class="font-mono-sm text-mono-sm text-outline uppercase tracking-wider pt-space-xs">
+                    CORE ETHOS • FULL-STACK DEVELOPMENT
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- System Telemetry Graphic -->
+            <div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm space-y-space-md border border-outline-variant/30">
+              <div class="flex items-center justify-between font-mono-sm text-mono-sm text-on-surface-variant">
+                <span class="flex items-center gap-space-xs">
+                  <span class="material-symbols-outlined text-[14px] text-primary">data_object</span>
+                  FULL-STACK SYSTEM RELIABILITY
+                </span>
+                <span class="text-primary font-medium">99.9% UPTIME</span>
+              </div>
+              <svg class="w-full h-16 text-primary" fill="none" viewBox="0 0 340 60" xmlns="http://www.w3.org/2000/svg">
+                <path class="opacity-90" d="M0 45 L35 45 L45 20 L65 52 L80 32 L95 40 L120 12 L140 45 L170 45 L185 24 L200 45 L225 18 L240 38 L260 22 L275 45 L340 45" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"></path>
+                <circle cx="120" cy="12" r="3.5" class="fill-primary animate-pulse"></circle>
+                <circle cx="225" cy="18" r="3.5" class="fill-secondary animate-pulse"></circle>
+                <line x1="0" y1="52" x2="340" y2="52" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4" class="opacity-20"></line>
+                <line x1="0" y1="20" x2="340" y2="20" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4" class="opacity-10"></line>
+              </svg>
+              <div class="grid grid-cols-3 gap-space-sm pt-space-2xs text-center font-mono-sm text-mono-sm">
+                <div class="bg-surface-container p-space-xs rounded">
+                  <div class="text-outline text-[10px] uppercase">MERN Stack</div>
+                  <div class="text-on-surface font-semibold">Active</div>
+                </div>
+                <div class="bg-surface-container p-space-xs rounded">
+                  <div class="text-outline text-[10px] uppercase">Python Engine</div>
+                  <div class="text-on-surface font-semibold">Verified</div>
+                </div>
+                <div class="bg-surface-container p-space-xs rounded">
+                  <div class="text-outline text-[10px] uppercase">GPA</div>
+                  <div class="text-primary font-semibold">8.23</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column -->
+          <div class="lg:col-span-7 flex flex-col gap-space-xl">
+            <!-- Narrative Bio -->
+            <div class="bg-surface-container-low p-space-xl rounded-xl shadow-sm space-y-space-md border border-outline-variant/30">
+              <div class="flex items-center gap-space-xs font-mono-sm text-mono-sm text-outline-variant">
+                <span class="material-symbols-outlined text-[16px] text-primary">person</span>
+                <span>GOVINDA DAS // BIOGRAPHY & VISION</span>
+              </div>
+              <p class="font-body-lg text-body-lg text-on-surface leading-relaxed font-normal">
+                I am a B.Tech Computer Science student at <strong>VIT Bhopal</strong> specializing in <strong>MERN full-stack development and software engineering</strong>. I possess hands-on experience in building responsive web applications, RESTful APIs, and automated Python tools.
+              </p>
+              <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                My passion lies in building scalable, performant, and user-focused web applications. Whether engineering full-stack MERN platforms like <em>RENTaLUXE</em>, developing responsive landing pages like <em>MYSHIP App Website</em>, or building automated Python web tools, I emphasize robust architecture, clean code principles, and intuitive user experiences.
+              </p>
+            </div>
+
+            <!-- Structured Metadata Cards (2x2 Grid) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+              <div class="bg-surface-container-low hover:bg-surface-container p-space-lg rounded-xl shadow-sm transition-colors duration-200 flex flex-col justify-between h-40 border border-outline-variant/30">
+                <div class="flex items-center justify-between">
+                  <span class="font-mono-sm text-mono-sm text-outline uppercase tracking-wider">01 / LOCATION</span>
+                  <span class="material-symbols-outlined text-primary text-[20px]">public</span>
+                </div>
+                <div>
+                  <div class="font-headline-md text-headline-md text-on-surface font-bold">Cherthala, Alappuzha</div>
+                  <div class="font-mono-sm text-mono-sm text-on-surface-variant mt-space-2xs flex items-center gap-space-2xs">
+                    <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                    <span>Kerala, India (IST / UTC+5:30)</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-surface-container-low hover:bg-surface-container p-space-lg rounded-xl shadow-sm transition-colors duration-200 flex flex-col justify-between h-40 border border-outline-variant/30">
+                <div class="flex items-center justify-between">
+                  <span class="font-mono-sm text-mono-sm text-outline uppercase tracking-wider">02 / CORE FOCUS</span>
+                  <span class="material-symbols-outlined text-secondary text-[20px]">code_blocks</span>
+                </div>
+                <div>
+                  <div class="font-headline-sm text-headline-sm text-on-surface font-bold leading-tight">MERN & Full-Stack</div>
+                  <div class="font-mono-sm text-mono-sm text-primary mt-space-2xs">
+                    React • Node • Express • Mongo
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-surface-container-low hover:bg-surface-container p-space-lg rounded-xl shadow-sm transition-colors duration-200 flex flex-col justify-between h-40 border border-outline-variant/30">
+                <div class="flex items-center justify-between">
+                  <span class="font-mono-sm text-mono-sm text-outline uppercase tracking-wider">03 / ACADEMICS</span>
+                  <span class="material-symbols-outlined text-on-surface-variant text-[20px]">school</span>
+                </div>
+                <div>
+                  <div class="font-headline-sm text-headline-sm text-on-surface font-bold leading-tight">B.Tech Computer Science</div>
+                  <div class="font-mono-sm text-mono-sm text-outline mt-space-2xs">
+                    VIT Bhopal • GPA: 8.23 / 10
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-surface-container-low hover:bg-surface-container p-space-lg rounded-xl shadow-sm transition-colors duration-200 flex flex-col justify-between h-40 border border-outline-variant/30">
+                <div class="flex items-center justify-between">
+                  <span class="font-mono-sm text-mono-sm text-outline uppercase tracking-wider">04 / EXPERIENCE</span>
+                  <span class="material-symbols-outlined text-primary text-[20px]">work</span>
+                </div>
+                <div>
+                  <div class="font-headline-sm text-headline-sm text-on-surface font-bold leading-tight">Technology Intern</div>
+                  <div class="font-mono-sm text-mono-sm text-on-surface-variant mt-space-2xs">
+                    Deloitte • Virtual Internship
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Fastfetch Terminal Component -->
+            <div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-md border border-outline-variant/40">
+              <div class="bg-surface-container-high px-space-md py-space-sm flex items-center justify-between">
+                <div class="flex items-center gap-space-xs">
+                  <span class="w-2.5 h-2.5 rounded-full bg-error/70 inline-block"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-secondary/50 inline-block"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-primary/70 inline-block"></span>
+                  <span class="font-mono-sm text-mono-sm text-on-surface-variant ml-space-sm">govinda@vitbhopal: ~ (profile-fetch)</span>
+                </div>
+                <div class="flex items-center gap-space-xs font-mono-sm text-mono-sm text-outline">
+                  <span class="material-symbols-outlined text-[14px]">terminal</span>
+                  <span>bash</span>
+                </div>
+              </div>
+
+              <div class="p-space-lg font-mono-md text-mono-md text-on-surface space-y-space-sm selection:bg-primary selection:text-on-primary">
+                <div class="flex items-center gap-space-sm">
+                  <span class="text-primary font-bold">$</span>
+                  <span class="text-on-surface">fastfetch --user "Govinda Das" --institution "VIT Bhopal"</span>
+                </div>
+                <div class="bg-surface-container-low p-space-md rounded-lg space-y-space-xs font-label-code text-label-code text-on-surface-variant">
+                  <div class="flex items-center justify-between">
+                    <span class="text-outline">name.full:</span>
+                    <span class="text-on-surface font-semibold text-primary">Govinda Das</span>
+                  </div>
+                  <div class="flex items-center justify-between">
+                    <span class="text-outline">education.degree:</span>
+                    <span class="text-on-surface">B.Tech Computer Science</span>
+                  </div>
+                  <div class="flex items-center justify-between">
+                    <span class="text-outline">education.university:</span>
+                    <span class="text-on-surface">VIT Bhopal (Sehore, MP) | GPA: 8.23</span>
+                  </div>
+                  <div class="flex items-center justify-between">
+                    <span class="text-outline">experience.internship:</span>
+                    <span class="text-secondary font-semibold">Deloitte — Technology Virtual Intern</span>
+                  </div>
+                  <div class="flex items-center justify-between">
+                    <span class="text-outline">skills.primary:</span>
+                    <span class="text-on-surface">Python, C++, JavaScript, React.js, Node.js, Express.js, MongoDB</span>
+                  </div>
+                  <div class="flex items-center justify-between">
+                    <span class="text-outline">engineering.focus:</span>
+                    <span class="text-primary font-medium">MERN Full-Stack Development & Responsive Web Interfaces</span>
+                  </div>
+                </div>
+                <div class="flex items-center gap-space-sm pt-space-xs">
+                  <span class="text-primary font-bold">$</span>
+                  <span class="text-on-surface-variant">echo "Focused on building performant, user-friendly web systems."</span>
+                  <span class="inline-block w-2 h-4 bg-primary animate-pulse"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 03: EDUCATION & ROADMAP -->
+      <section id="education" class="w-full relative py-space-xl scroll-mt-20">
+        <div class="flex flex-col gap-space-xs mb-space-2xl">
+          <div class="flex items-center gap-space-xs font-mono-sm text-mono-sm text-primary uppercase tracking-widest">
+            <span class="inline-block w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+            <span>03 / ACADEMIC ROADMAP & EXPERIENCE</span>
+          </div>
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+            <div class="flex flex-col gap-space-2xs">
+              <h2 class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight">
+                Education & Experience
+              </h2>
+              <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                Rigorous computer science degree program at VIT Bhopal, backed by practical experience at Deloitte.
+              </p>
+            </div>
+            <div class="flex items-center gap-space-sm bg-surface-container-lowest p-space-xs rounded-lg shadow-sm border border-outline-variant/30">
+              <div class="flex flex-col px-space-md py-space-2xs bg-surface-container-low rounded">
+                <span class="font-mono-sm text-mono-sm text-on-surface-variant">VIT BHOPAL GPA</span>
+                <span class="font-mono-md text-mono-md text-primary font-semibold">8.23 / 10</span>
+              </div>
+              <div class="flex flex-col px-space-md py-space-2xs bg-surface-container-low rounded">
+                <span class="font-mono-sm text-mono-sm text-on-surface-variant">STATUS</span>
+                <span class="font-mono-md text-mono-md text-secondary font-semibold">ACTIVE ENROLLMENT</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+          <div class="lg:col-span-8 relative flex flex-col">
+            <div class="absolute left-3.5 md:left-5 top-3 bottom-8 w-0.5 bg-surface-container-highest"></div>
+
+            <!-- 2022-2024 HIGHER SECONDARY NODE -->
+            <div class="relative flex items-start gap-space-lg md:gap-space-xl pb-space-2xl group">
+              <div class="relative z-10 flex items-center justify-center w-7 md:w-10 h-7 md:h-10 rounded-full bg-surface-container-lowest shadow-sm shrink-0 mt-1 transition-all duration-300 group-hover:scale-110 border border-outline-variant/30">
+                <div class="w-2.5 h-2.5 rounded-full bg-surface-container-highest group-hover:bg-primary transition-colors duration-200"></div>
+              </div>
+              <div class="flex-1 flex flex-col bg-surface-container-low rounded-xl p-space-lg shadow-md hover:shadow-xl transition-all duration-300 border border-outline-variant/30">
+                <div class="flex flex-wrap items-center justify-between gap-space-xs pb-space-sm">
+                  <span class="font-mono-md text-mono-md text-primary font-semibold">06/2022 — 05/2024</span>
+                  <span class="font-mono-sm text-mono-sm text-on-surface-variant bg-surface-container px-space-sm py-space-2xs rounded">GPA: 7.8 / 10</span>
+                </div>
+                <h3 class="font-headline-md text-headline-md text-on-surface font-semibold">PCM | Higher Secondary Education</h3>
+                <div class="flex items-center gap-space-xs font-mono-sm text-mono-sm text-secondary pt-space-2xs pb-space-sm">
+                  <span class="material-symbols-outlined text-[16px]">school</span>
+                  <span>Sree Sankara English Medium School</span>
+                  <span>•</span>
+                  <span>Alappuzha, Kerala</span>
+                </div>
+                <p class="font-body-md text-body-md text-on-surface-variant pb-space-md leading-relaxed">
+                  Completed Higher Secondary Education in Physics, Chemistry, and Mathematics (PCM), building strong analytical, logical, and mathematical foundations for computer science engineering.
+                </p>
+                <div class="flex flex-col gap-space-xs pt-space-xs">
+                  <span class="font-mono-sm text-mono-sm text-on-surface-variant uppercase tracking-wider">Core Subjects</span>
+                  <div class="flex flex-wrap gap-space-xs">
+                    <span class="font-mono-sm text-mono-sm bg-surface-container text-on-surface px-space-sm py-space-2xs rounded">Physics</span>
+                    <span class="font-mono-sm text-mono-sm bg-surface-container text-on-surface px-space-sm py-space-2xs rounded">Mathematics</span>
+                    <span class="font-mono-sm text-mono-sm bg-surface-container text-on-surface px-space-sm py-space-2xs rounded">Chemistry</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 09/2024-PRESENT ACTIVE B.TECH NODE -->
+            <div class="relative flex items-start gap-space-lg md:gap-space-xl pb-space-2xl group">
+              <div class="relative z-10 flex items-center justify-center w-7 md:w-10 h-7 md:h-10 rounded-full bg-surface-container-lowest shadow-md shrink-0 mt-1 border border-primary/40">
+                <div class="w-3 md:w-3.5 h-3 md:h-3.5 rounded-full bg-primary shadow-sm shadow-primary/50 animate-pulse"></div>
+              </div>
+              <div class="flex-1 flex flex-col bg-surface-container rounded-xl p-space-lg shadow-xl relative overflow-hidden transition-all duration-300 border border-primary/30">
+                <div class="absolute -right-16 -top-16 w-48 h-48 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+                <div class="flex flex-wrap items-center justify-between gap-space-xs pb-space-sm relative z-10">
+                  <div class="flex items-center gap-space-xs">
+                    <span class="font-mono-md text-mono-md text-primary font-bold">09/2024 — PRESENT</span>
+                    <span class="inline-flex items-center gap-space-2xs px-space-sm py-space-2xs rounded bg-primary/15">
+                      <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                      <span class="font-mono-sm text-mono-sm uppercase text-primary font-semibold">ACTIVE DEGREE</span>
+                    </span>
+                  </div>
+                  <span class="font-mono-sm text-mono-sm text-on-surface-variant font-semibold">GPA: 8.23 / 10</span>
+                </div>
+                <h3 class="font-headline-md text-headline-md text-on-surface font-semibold relative z-10">B.Tech in Computer Science</h3>
+                <div class="flex items-center gap-space-xs font-mono-sm text-mono-sm text-secondary pt-space-2xs pb-space-sm relative z-10">
+                  <span class="material-symbols-outlined text-[16px]">account_balance</span>
+                  <span>VIT Bhopal University</span>
+                  <span>•</span>
+                  <span>Sehore, Madhya Pradesh</span>
+                </div>
+                <p class="font-body-md text-body-md text-on-surface-variant pt-space-2xs pb-space-md relative z-10">
+                  Computer Science undergraduate program focusing on web application architecture, algorithm design, database management systems, and MERN full-stack development.
+                </p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm py-space-sm relative z-10">
+                  <div class="bg-surface-container-low p-space-md rounded-lg flex flex-col gap-space-2xs">
+                    <div class="flex items-center justify-between">
+                      <span class="font-headline-sm text-headline-sm text-on-surface font-medium">MERN Full-Stack</span>
+                      <span class="font-mono-sm text-mono-sm text-primary">MERN</span>
+                    </div>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant">MongoDB, Express.js, React.js, and Node.js RESTful API design and database integrations.</p>
+                  </div>
+                  <div class="bg-surface-container-low p-space-md rounded-lg flex flex-col gap-space-2xs">
+                    <div class="flex items-center justify-between">
+                      <span class="font-headline-sm text-headline-sm text-on-surface font-medium">Data Structures & Algorithms</span>
+                      <span class="font-mono-sm text-mono-sm text-primary">DSA</span>
+                    </div>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant">Problem solving in C++, algorithm efficiency, tree structures, and dynamic programming.</p>
+                  </div>
+                  <div class="bg-surface-container-low p-space-md rounded-lg flex flex-col gap-space-2xs">
+                    <div class="flex items-center justify-between">
+                      <span class="font-headline-sm text-headline-sm text-on-surface font-medium">Database Systems</span>
+                      <span class="font-mono-sm text-mono-sm text-primary">DBMS</span>
+                    </div>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant">Document and relational schema design, query optimization, and REST API database wiring.</p>
+                  </div>
+                  <div class="bg-surface-container-low p-space-md rounded-lg flex flex-col gap-space-2xs">
+                    <div class="flex items-center justify-between">
+                      <span class="font-headline-sm text-headline-sm text-on-surface font-medium">Programming Systems</span>
+                      <span class="font-mono-sm text-mono-sm text-primary">SYS</span>
+                    </div>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant">Python scripting, JavaScript DOM manipulation, HTML5/CSS3 responsive UI styling, and Linux CLI.</p>
+                  </div>
+                </div>
+
+                <div class="mt-space-md p-space-md bg-surface-container-highest/60 rounded-lg flex items-start gap-space-md relative z-10 border border-outline-variant/30">
+                  <span class="material-symbols-outlined text-primary text-[22px] mt-0.5">verified</span>
+                  <div class="flex flex-col gap-space-2xs">
+                    <span class="font-mono-sm text-mono-sm text-on-surface font-semibold">ACADEMIC EXCELLENCE</span>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant">
+                      Consistently maintaining an 8.23 / 10 GPA while building production-ready projects and earning industry credentials.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- WORK EXPERIENCE NODE: DELOITTE -->
+            <div class="relative flex items-start gap-space-lg md:gap-space-xl group">
+              <div class="relative z-10 flex items-center justify-center w-7 md:w-10 h-7 md:h-10 rounded-full bg-surface-container-lowest shadow-sm shrink-0 mt-1 transition-all duration-300 group-hover:scale-110 border border-outline-variant/30">
+                <span class="material-symbols-outlined text-primary text-[18px]">work</span>
+              </div>
+              <div class="flex-1 flex flex-col bg-surface-container-low rounded-xl p-space-lg shadow-md hover:shadow-xl transition-all duration-300 border border-outline-variant/30">
+                <div class="flex flex-wrap items-center justify-between gap-space-xs pb-space-sm">
+                  <span class="font-mono-md text-mono-md text-primary font-semibold">WORK EXPERIENCE</span>
+                  <span class="font-mono-sm text-mono-sm text-primary bg-primary/10 px-space-sm py-space-2xs rounded font-medium">REMOTE</span>
+                </div>
+                <h3 class="font-headline-md text-headline-md text-on-surface font-semibold">Technology Virtual Intern</h3>
+                <div class="flex items-center gap-space-xs font-mono-sm text-mono-sm text-secondary pt-space-2xs pb-space-sm">
+                  <span class="material-symbols-outlined text-[16px]">domain</span>
+                  <span class="font-semibold">Deloitte</span>
+                  <span>•</span>
+                  <span>Remote Virtual Internship</span>
+                </div>
+                <p class="font-body-md text-body-md text-on-surface-variant pt-space-2xs pb-space-sm leading-relaxed">
+                  Engaged in technology consulting tasks, architectural analysis, software development methodologies, and virtual enterprise engineering practices.
+                </p>
+                <div class="flex items-center gap-space-xs font-mono-sm text-mono-sm text-on-surface-variant pt-space-xs">
+                  <span class="material-symbols-outlined text-[16px] text-primary">check_circle</span>
+                  <span>Practical exposure to enterprise technology workflows and consulting analysis</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <aside class="lg:col-span-4 flex flex-col gap-space-lg">
+            <div class="bg-surface-container-low rounded-xl p-space-lg flex flex-col gap-space-md shadow-md border border-outline-variant/30">
+              <div class="flex items-center justify-between">
+                <span class="font-mono-sm text-mono-sm text-on-surface-variant uppercase tracking-wider">Degree Metric</span>
+                <span class="font-mono-sm text-mono-sm text-primary font-semibold">GPA 8.23 / 10</span>
+              </div>
+              <div class="flex items-center justify-center py-space-md relative">
+                <svg class="w-36 h-36 transform -rotate-90" viewBox="0 0 100 100">
+                  <circle cx="50" cy="50" r="40" fill="transparent" stroke="currentColor" stroke-width="6" class="text-surface-container-highest"></circle>
+                  <circle cx="50" cy="50" r="40" fill="transparent" stroke="currentColor" stroke-width="6" stroke-dasharray="251.2" stroke-dashoffset="44.4" stroke-linecap="round" class="text-primary transition-all duration-1000"></circle>
+                </svg>
+                <div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+                  <span class="font-headline-md text-headline-md text-on-surface font-bold">82.3%</span>
+                  <span class="font-mono-sm text-mono-sm text-on-surface-variant">GPA EQUIVALENT</span>
+                </div>
+              </div>
+              <div class="flex flex-col gap-space-xs pt-space-xs">
+                <div class="flex items-center justify-between font-mono-sm text-mono-sm">
+                  <span class="text-on-surface-variant">MERN Full-Stack Dev</span>
+                  <span class="text-on-surface font-medium">Advanced</span>
+                </div>
+                <div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+                  <div class="h-full bg-primary rounded-full" style="width: 90%;"></div>
+                </div>
+              </div>
+              <div class="flex flex-col gap-space-xs">
+                <div class="flex items-center justify-between font-mono-sm text-mono-sm">
+                  <span class="text-on-surface-variant">Frontend UI (React/CSS)</span>
+                  <span class="text-on-surface font-medium">Hands-On</span>
+                </div>
+                <div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+                  <div class="h-full bg-secondary rounded-full" style="width: 88%;"></div>
+                </div>
+              </div>
+              <div class="flex flex-col gap-space-xs">
+                <div class="flex items-center justify-between font-mono-sm text-mono-sm">
+                  <span class="text-on-surface-variant">Programming (Python/C++)</span>
+                  <span class="text-on-surface font-medium">Proficient</span>
+                </div>
+                <div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+                  <div class="h-full bg-primary-fixed rounded-full" style="width: 85%;"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-surface-container-lowest rounded-xl p-space-md shadow-md flex flex-col gap-space-xs font-mono-sm text-mono-sm border border-outline-variant/30">
+              <div class="flex items-center justify-between pb-space-xs text-on-surface-variant border-b border-outline-variant/20">
+                <div class="flex items-center gap-space-xs">
+                  <span class="w-2.5 h-2.5 rounded-full bg-error"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-surface-container-highest"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+                  <span class="ml-space-2xs text-on-surface-variant">academic_profile.sh</span>
+                </div>
+                <span class="text-[10px] text-on-surface-variant/60">VIT BHOPAL</span>
+              </div>
+              <div class="flex flex-col gap-space-2xs text-on-surface-variant/80 pt-space-2xs font-mono-sm">
+                <span class="text-on-surface font-semibold">$ run_profile --student "Govinda Das"</span>
+                <span class="text-primary">&gt; [OK] B.Tech Computer Science Degree</span>
+                <span class="text-primary">&gt; [OK] GPA: 8.23 / 10 Verified</span>
+                <span class="text-secondary">&gt; [OK] Deloitte Virtual Internship Completed</span>
+                <span class="text-on-surface-variant/70">&gt; Status: Available for SWE & Full-Stack roles</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- SECTION 04: SKILLS & TECHNICAL STACK -->
+      <section id="skills" class="w-full relative py-space-xl scroll-mt-20">
+        <div class="flex flex-col gap-space-xs mb-space-2xl">
+          <div class="flex items-center gap-space-xs font-mono-sm text-mono-sm text-primary uppercase tracking-widest">
+            <span>04</span>
+            <span class="text-outline-variant">/</span>
+            <span>TECHNICAL SKILLS</span>
+          </div>
+          <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md">
+            <h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight font-semibold">
+              Technical Stack & Engineering Competencies
+            </h2>
+            <p class="font-body-md text-body-md text-on-surface-variant max-w-xl">
+              Languages, frameworks, databases, and software tools applied in building responsive web applications and automated systems.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+          <div class="lg:col-span-5 flex flex-col gap-space-base sticky top-24">
+            <div class="bg-surface-container-low rounded-xl p-space-lg shadow-xl flex flex-col gap-space-lg border border-outline-variant/30">
+              <div class="flex items-center justify-between pb-space-sm border-b border-outline-variant/30">
+                <div class="flex items-center gap-space-xs">
+                  <span class="w-2.5 h-2.5 rounded-full bg-primary/80"></span>
+                  <span class="font-mono-sm text-mono-sm text-on-surface uppercase tracking-wider font-semibold">mern_stack_architecture.spec</span>
+                </div>
+                <div class="flex items-center gap-space-xs font-mono-sm text-mono-sm text-on-surface-variant">
+                  <span class="material-symbols-outlined text-[14px]">tune</span>
+                  <span id="active-flow-label">MERN FULL-STACK PIPELINE</span>
+                </div>
+              </div>
+
+              <div class="relative bg-surface-container-lowest rounded-lg p-space-base flex flex-col items-center gap-space-base overflow-hidden border border-outline-variant/40">
+                <div class="absolute inset-0 opacity-[0.03] pointer-events-none" style="background-image: radial-gradient(#e2e2e6 1px, transparent 1px); background-size: 16px 16px;"></div>
+                
+                <div class="blueprint-node relative z-10 w-full max-w-[220px] bg-surface-container rounded-lg p-space-sm flex items-center justify-between shadow-sm cursor-pointer hover:border-primary border border-transparent transition-colors" id="bp-node-python" data-desc="React.js Single Page Application & Frontend UI">
+                  <div class="flex items-center gap-space-xs">
+                    <span class="material-symbols-outlined text-primary text-[18px]">devices</span>
+                    <span class="font-mono-md text-mono-md text-on-surface font-medium">REACT.JS FRONTEND</span>
+                  </div>
+                  <span class="font-mono-sm text-mono-sm text-on-surface-variant">UI</span>
+                </div>
+
+                <div class="w-px h-6 bg-surface-container-highest relative">
+                  <div class="absolute top-0 left-[-1px] w-[3px] h-2 bg-primary rounded-full animate-bounce"></div>
+                </div>
+
+                <div class="w-full grid grid-cols-3 gap-space-xs z-10">
+                  <div class="blueprint-node bg-surface-container rounded p-space-xs flex flex-col items-center text-center gap-space-2xs cursor-pointer hover:bg-surface-container-high border border-transparent hover:border-secondary transition-colors" id="bp-node-django" data-desc="Node.js & Express.js REST API Server">
+                    <span class="material-symbols-outlined text-secondary text-[16px]">dns</span>
+                    <span class="font-mono-sm text-mono-sm text-on-surface font-medium leading-tight">Express.js</span>
+                    <span class="font-mono-sm text-[10px] text-on-surface-variant">REST APIs</span>
+                  </div>
+                  <div class="blueprint-node bg-surface-container rounded p-space-xs flex flex-col items-center text-center gap-space-2xs cursor-pointer hover:bg-surface-container-high border border-transparent hover:border-primary transition-colors" id="bp-node-drf" data-desc="Python Code Inspector & Data Analyzer">
+                    <span class="material-symbols-outlined text-primary text-[16px]">code</span>
+                    <span class="font-mono-sm text-mono-sm text-on-surface font-medium leading-tight">Python Engine</span>
+                    <span class="font-mono-sm text-[10px] text-on-surface-variant">Data Parser</span>
+                  </div>
+                  <div class="blueprint-node bg-surface-container rounded p-space-xs flex flex-col items-center text-center gap-space-2xs cursor-pointer hover:bg-surface-container-high border border-transparent hover:border-tertiary-fixed-dim transition-colors" id="bp-node-postgres" data-desc="MongoDB Document Database Tier">
+                    <span class="material-symbols-outlined text-tertiary-fixed-dim text-[16px]">database</span>
+                    <span class="font-mono-sm text-mono-sm text-on-surface font-medium leading-tight">MongoDB</span>
+                    <span class="font-mono-sm text-[10px] text-on-surface-variant">NoSQL Store</span>
+                  </div>
+                </div>
+
+                <div class="w-full flex justify-center py-space-2xs">
+                  <svg width="240" height="28" viewBox="0 0 240 28" fill="none" class="text-surface-container-highest">
+                    <path d="M40 0V12C40 16 44 20 48 20H116V28" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 3"></path>
+                    <path d="M120 0V28" stroke="currentColor" stroke-width="1.5"></path>
+                    <path d="M200 0V12C200 16 196 20 192 20H124V28" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 3"></path>
+                  </svg>
+                </div>
+
+                <div class="blueprint-node relative z-10 w-full bg-surface-container-high rounded-lg p-space-sm flex items-center justify-between shadow-md cursor-pointer border border-transparent hover:border-primary transition-colors" id="bp-node-app" data-desc="Deployed Web Application Egress">
+                  <div class="flex items-center gap-space-xs">
+                    <span class="material-symbols-outlined text-primary-fixed text-[20px]">layers</span>
+                    <div class="flex flex-col">
+                      <span class="font-mono-md text-mono-md text-on-surface font-semibold">Production Web Deployment</span>
+                      <span class="font-mono-sm text-[10px] text-on-surface-variant">Performant • Scalable • Responsive</span>
+                    </div>
+                  </div>
+                  <span class="inline-flex items-center px-space-xs py-space-2xs rounded bg-surface-container text-primary font-mono-sm text-[10px]">
+                    200 OK
+                  </span>
+                </div>
+              </div>
+
+              <div class="bg-surface-container-lowest rounded-lg p-space-sm flex flex-col gap-space-xs font-mono-sm text-mono-sm border border-outline-variant/30">
+                <div class="flex items-center justify-between text-on-surface-variant">
+                  <span>Full-Stack Architecture</span>
+                  <span class="text-primary font-medium" id="bp-latency">MERN Stack</span>
+                </div>
+                <div class="flex items-center justify-between text-on-surface-variant">
+                  <span>Core Technologies</span>
+                  <span class="text-secondary font-medium" id="bp-serialization">Mongo, Express, React, Node</span>
+                </div>
+                <div class="flex items-center justify-between text-on-surface-variant">
+                  <span>Operating Environment</span>
+                  <span class="text-on-surface">Linux / Cross-Platform</span>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-space-xs text-on-surface-variant font-mono-sm text-[11px]">
+                <span class="material-symbols-outlined text-[14px]">info</span>
+                <span>Click components to inspect architecture telemetry</span>
+              </div>
+            </div>
+
+            <div class="bg-surface-container-low rounded-xl p-space-md flex items-center justify-between border border-outline-variant/30">
+              <div class="flex items-center gap-space-sm">
+                <div class="p-space-xs rounded bg-surface-container text-primary">
+                  <span class="material-symbols-outlined text-[20px]">code</span>
+                </div>
+                <div>
+                  <div class="font-headline-sm text-headline-sm text-on-surface">100%</div>
+                  <div class="font-mono-sm text-mono-sm text-on-surface-variant">Responsive & Clean Code</div>
+                </div>
+              </div>
+              <div class="h-8 w-px bg-surface-container-highest"></div>
+              <div class="flex items-center gap-space-sm">
+                <div class="p-space-xs rounded bg-surface-container text-secondary">
+                  <span class="material-symbols-outlined text-[20px]">code_blocks</span>
+                </div>
+                <div>
+                  <div class="font-headline-sm text-headline-sm text-on-surface">MERN</div>
+                  <div class="font-mono-sm text-mono-sm text-on-surface-variant">Full-Stack Stack</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-7 flex flex-col gap-space-base">
+            <!-- 01: Programming Languages -->
+            <div class="group bg-surface-container-low hover:bg-surface-container transition-colors duration-200 rounded-xl p-space-lg shadow-md flex flex-col gap-space-md border border-outline-variant/30">
+              <div class="flex items-baseline justify-between">
+                <div class="flex items-baseline gap-space-sm">
+                  <span class="font-mono-md text-mono-md text-primary font-bold">01</span>
+                  <span class="font-mono-sm text-mono-sm text-outline uppercase tracking-wider">—</span>
+                  <h3 class="font-headline-md text-headline-md text-on-surface tracking-tight group-hover:text-primary transition-colors">Programming Languages</h3>
+                </div>
+                <span class="font-mono-sm text-mono-sm text-on-surface-variant">LANGUAGES</span>
+              </div>
+              <p class="font-body-md text-body-md text-on-surface-variant">
+                Core programming languages used for application logic, algorithmic problem solving, scripting, and web development.
+              </p>
+              <div class="grid grid-cols-2 sm:grid-cols-5 gap-space-xs pt-space-2xs">
+                <div class="bg-surface-container-lowest rounded p-space-sm flex flex-col border border-outline-variant/20">
+                  <span class="font-mono-md text-mono-md text-on-surface font-medium">Python</span>
+                  <span class="font-mono-sm text-[11px] text-primary">Scripting & Utilities</span>
+                </div>
+                <div class="bg-surface-container-lowest rounded p-space-sm flex flex-col border border-outline-variant/20">
+                  <span class="font-mono-md text-mono-md text-on-surface font-medium">C++</span>
+                  <span class="font-mono-sm text-[11px] text-on-surface-variant">DSA & Algorithms</span>
+                </div>
+                <div class="bg-surface-container-lowest rounded p-space-sm flex flex-col border border-outline-variant/20">
+                  <span class="font-mono-md text-mono-md text-on-surface font-medium">JavaScript</span>
+                  <span class="font-mono-sm text-[11px] text-secondary">ES6+ / Web Logic</span>
+                </div>
+                <div class="bg-surface-container-lowest rounded p-space-sm flex flex-col border border-outline-variant/20">
+                  <span class="font-mono-md text-mono-md text-on-surface font-medium">HTML5</span>
+                  <span class="font-mono-sm text-[11px] text-on-surface-variant">Semantic Markup</span>
+                </div>
+                <div class="bg-surface-container-lowest rounded p-space-sm flex flex-col border border-outline-variant/20">
+                  <span class="font-mono-md text-mono-md text-on-surface font-medium">CSS3</span>
+                  <span class="font-mono-sm text-[11px] text-on-surface-variant">Responsive Styling</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 02: Frameworks & Runtime -->
+            <div class="group bg-surface-container-low hover:bg-surface-container transition-colors duration-200 rounded-xl p-space-lg shadow-md flex flex-col gap-space-md border border-outline-variant/30">
+              <div class="flex items-baseline justify-between">
+                <div class="flex items-baseline gap-space-sm">
+                  <span class="font-mono-md text-mono-md text-primary font-bold">02</span>
+                  <span class="font-mono-sm text-mono-sm text-outline uppercase tracking-wider">—</span>
+                  <h3 class="font-headline-md text-headline-md text-on-surface tracking-tight group-hover:text-primary transition-colors">Frameworks & Runtime</h3>
+                </div>
+                <span class="font-mono-sm text-mono-sm text-on-surface-variant">MERN STACK</span>
+              </div>
+              <p class="font-body-md text-body-md text-on-surface-variant">
+                Full-stack web application development runtimes and frameworks for building interactive client interfaces and RESTful web APIs.
+              </p>
+              <div class="grid grid-cols-2 sm:grid-cols-3 gap-space-xs pt-space-2xs">
+                <div class="bg-surface-container-lowest rounded p-space-sm flex flex-col border border-outline-variant/20">
+                  <span class="font-mono-md text-mono-md text-on-surface font-medium">React.js</span>
+                  <span class="font-mono-sm text-[11px] text-primary">Single-Page Applications</span>
+                </div>
+                <div class="bg-surface-container-lowest rounded p-space-sm flex flex-col border border-outline-variant/20">
+                  <span class="font-mono-md text-mono-md text-on-surface font-medium">Node.js</span>
+                  <span class="font-mono-sm text-[11px] text-secondary">Asynchronous Runtime</span>
+                </div>
+                <div class="bg-surface-container-lowest rounded p-space-sm flex flex-col border border-outline-variant/20">
+                  <span class="font-mono-md text-mono-md text-on-surface font-medium">Express.js</span>
+                  <span class="font-mono-sm text-[11px] text-on-surface-variant">REST API Router</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 03: Web Engineering & Architecture -->
+            <div class="group bg-surface-container-low hover:bg-surface-container transition-colors duration-200 rounded-xl p-space-lg shadow-md flex flex-col gap-space-md border border-outline-variant/30">
+              <div class="flex items-baseline justify-between">
+                <div class="flex items-baseline gap-space-sm">
+                  <span class="font-mono-md text-mono-md text-primary font-bold">03</span>
+                  <span class="font-mono-sm text-mono-sm text-outline uppercase tracking-wider">—</span>
+                  <h3 class="font-headline-md text-headline-md text-on-surface tracking-tight group-hover:text-primary transition-colors">Web Engineering & UI Systems</h3>
+                </div>
+                <span class="font-mono-sm text-mono-sm text-on-surface-variant">WEB SYSTEMS</span>
+              </div>
+              <p class="font-body-md text-body-md text-on-surface-variant">
+                Frontend design standards, RESTful API architecture, responsive layouts, and modern web application development practices.
+              </p>
+              <div class="grid grid-cols-2 sm:grid-cols-3 gap-space-xs pt-space-2xs">
+                <div class="bg-surface-container-lowest rounded p-space-sm flex flex-col border border-outline-variant/20">
+                  <span class="font-mono-md text-mono-md text-on-surface font-medium">RESTful APIs</span>
+                  <span class="font-mono-sm text-[11px] text-primary">JSON Endpoints</span>
+                </div>
+                <div class="bg-surface-container-lowest rounded p-space-sm flex flex-col border border-outline-variant/20">
+                  <span class="font-mono-md text-mono-md text-on-surface font-medium">Responsive UI</span>
+                  <span class="font-mono-sm text-[11px] text-secondary">Mobile-First Layouts</span>
+                </div>
+                <div class="bg-surface-container-lowest rounded p-space-sm flex flex-col border border-outline-variant/20">
+                  <span class="font-mono-md text-mono-md text-on-surface font-medium">DOM Manipulation</span>
+                  <span class="font-mono-sm text-[11px] text-on-surface-variant">Dynamic Interfaces</span>
+                </div>
+                <div class="bg-surface-container-lowest rounded p-space-sm flex flex-col border border-outline-variant/20">
+                  <span class="font-mono-md text-mono-md text-on-surface font-medium">State Management</span>
+                  <span class="font-mono-sm text-[11px] text-on-surface-variant">React Hooks / State</span>
+                </div>
+                <div class="bg-surface-container-lowest rounded p-space-sm flex flex-col border border-outline-variant/20">
+                  <span class="font-mono-md text-mono-md text-on-surface font-medium">Linux Administration</span>
+                  <span class="font-mono-sm text-[11px] text-primary">CLI & Shell Commands</span>
+                </div>
+                <div class="bg-surface-container-lowest rounded p-space-sm flex flex-col border border-outline-variant/20">
+                  <span class="font-mono-md text-mono-md text-on-surface font-medium">Clean Code</span>
+                  <span class="font-mono-sm text-[11px] text-on-surface-variant">Modular Architecture</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 04: Databases & Tooling -->
+            <div class="group bg-surface-container-low hover:bg-surface-container transition-colors duration-200 rounded-xl p-space-lg shadow-md flex flex-col gap-space-md border border-outline-variant/30">
+              <div class="flex items-baseline justify-between">
+                <div class="flex items-baseline gap-space-sm">
+                  <span class="font-mono-md text-mono-md text-primary font-bold">04</span>
+                  <span class="font-mono-sm text-mono-sm text-outline uppercase tracking-wider">—</span>
+                  <h3 class="font-headline-md text-headline-md text-on-surface tracking-tight group-hover:text-primary transition-colors">Databases, Tooling & Soft Skills</h3>
+                </div>
+                <span class="font-mono-sm text-mono-sm text-on-surface-variant">TOOLKIT</span>
+              </div>
+              <p class="font-body-md text-body-md text-on-surface-variant">
+                Relational & document databases, version control, API testing utilities, and professional soft skills.
+              </p>
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-space-xs pt-space-2xs">
+                <div class="bg-surface-container-lowest rounded p-space-sm flex flex-col border border-outline-variant/20">
+                  <span class="font-mono-md text-mono-md text-on-surface font-medium">MongoDB</span>
+                  <span class="font-mono-sm text-[11px] text-primary">Document Database</span>
+                </div>
+                <div class="bg-surface-container-lowest rounded p-space-sm flex flex-col border border-outline-variant/20">
+                  <span class="font-mono-md text-mono-md text-on-surface font-medium">SQL</span>
+                  <span class="font-mono-sm text-[11px] text-on-surface-variant">Relational Queries</span>
+                </div>
+                <div class="bg-surface-container-lowest rounded p-space-sm flex flex-col border border-outline-variant/20">
+                  <span class="font-mono-md text-mono-md text-on-surface font-medium">Git / GitHub</span>
+                  <span class="font-mono-sm text-[11px] text-on-surface-variant">Version Control</span>
+                </div>
+                <div class="bg-surface-container-lowest rounded p-space-sm flex flex-col border border-outline-variant/20">
+                  <span class="font-mono-md text-mono-md text-on-surface font-medium">Soft Skills</span>
+                  <span class="font-mono-sm text-[11px] text-secondary">Communication & Decision Making</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 05: PROJECTS -->
+      <section id="projects" class="w-full relative py-space-xl scroll-mt-20">
+        <div class="flex flex-col gap-space-sm mb-space-3xl">
+          <div class="flex items-center gap-space-sm">
+            <span class="font-mono-sm text-mono-sm text-primary uppercase tracking-wider">05 // SELECTED PROJECTS</span>
+            <span class="w-12 h-px bg-surface-container-highest"></span>
+            <span class="font-mono-sm text-mono-sm text-on-surface-variant/60 uppercase">SOFTWARE & MERN FULL-STACK APPLICATIONS</span>
+          </div>
+          <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md mt-space-xs">
+            <div>
+              <h2 class="font-display text-display text-on-surface tracking-tight font-semibold">
+                Featured Engineering Projects
+              </h2>
+              <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mt-space-xs">
+                Real-world full-stack MERN web applications, responsive landing pages, and automated software inspection tools.
+              </p>
+            </div>
+
+            <div class="flex items-center gap-space-lg bg-surface-container-low px-space-md py-space-sm rounded-lg shadow-sm border border-outline-variant/30">
+              <div class="flex flex-col">
+                <span class="font-mono-sm text-mono-sm text-on-surface-variant">FEATURED PROJECTS</span>
+                <span class="font-headline-sm text-headline-sm text-on-surface font-semibold">3 MAJOR APPS</span>
+              </div>
+              <div class="w-px h-8 bg-surface-container-highest"></div>
+              <div class="flex flex-col">
+                <span class="font-mono-sm text-mono-sm text-on-surface-variant">CODE QUALITY</span>
+                <span class="font-headline-sm text-headline-sm text-primary font-semibold">PRODUCTION-READY</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT 1: WEBSITE INSPECTOR & VULNERABILITY SCANNER -->
+        <article class="flex flex-col mb-space-3xl bg-surface-container-low rounded-xl shadow-xl overflow-hidden border border-outline-variant/30">
+          <div class="flex flex-wrap items-center justify-between px-space-lg py-space-sm bg-surface-container gap-space-sm">
+            <div class="flex items-center gap-space-sm">
+              <span class="inline-flex items-center gap-space-xs px-space-xs py-space-2xs rounded bg-secondary/10 text-secondary font-mono-sm text-mono-sm">
+                <span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+                AUTOMATED_WEB_TOOL
+              </span>
+              <span class="font-mono-sm text-mono-sm text-on-surface-variant">PYTHON REQUEST ANALYSIS & CRAWLER</span>
+            </div>
+            <div class="flex items-center gap-space-md font-mono-sm text-mono-sm text-on-surface-variant">
+              <span class="text-primary">AUTOMATED CODE INSPECTION</span>
+              <span class="text-surface-container-highest">/</span>
+              <span>CVE REFERENCE REPORTS</span>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-0">
+            <div class="lg:col-span-6 p-space-lg lg:p-space-xl flex flex-col justify-between">
+              <div>
+                <div class="flex items-baseline gap-space-sm mb-space-2xs">
+                  <span class="font-mono-md text-mono-md text-secondary font-bold">01 —</span>
+                  <h3 class="font-headline-lg text-headline-lg text-on-surface">Website Vulnerability Scanner</h3>
+                </div>
+                <p class="font-mono-md text-mono-md text-secondary mb-space-md">
+                  Automated Web Application Inspection & Code Analysis Engine
+                </p>
+                <p class="font-body-md text-body-md text-on-surface-variant mb-space-lg leading-relaxed">
+                  Developed an automated web application inspection scanner in Python for vulnerability testing. Analyzes SQL Injection risks, Cross-Site Scripting (XSS) patterns, HTTP header configurations, authentication flows, and input validation. Features automated URL crawling, request analysis, severity classification, and detailed reports with CVE references and remediation recommendations.
+                </p>
+
+                <div class="flex flex-wrap gap-space-xs mb-space-xl">
+                  <span class="px-space-sm py-space-2xs rounded bg-surface-container text-on-surface font-mono-sm text-mono-sm">Python</span>
+                  <span class="px-space-sm py-space-2xs rounded bg-surface-container text-on-surface font-mono-sm text-mono-sm">Web Development</span>
+                  <span class="px-space-sm py-space-2xs rounded bg-surface-container text-on-surface font-mono-sm text-mono-sm">Automated Testing</span>
+                  <span class="px-space-sm py-space-2xs rounded bg-surface-container text-on-surface font-mono-sm text-mono-sm">URL Crawler</span>
+                  <span class="px-space-sm py-space-2xs rounded bg-surface-container text-on-surface font-mono-sm text-mono-sm">CVE Reporting</span>
+                </div>
+
+                <div class="space-y-space-sm mb-space-xl">
+                  <div class="p-space-md rounded bg-surface-container/60 border border-outline-variant/20">
+                    <div class="flex items-center gap-space-xs text-secondary font-mono-sm text-mono-sm mb-space-2xs">
+                      <span class="material-symbols-outlined text-secondary text-[16px]">code</span>
+                      <span>AUTOMATED REQUEST INSPECTION</span>
+                    </div>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant">
+                      Inspects SQL query formats, XSS reflections, HTTP header responses, and form input validation rules automatically.
+                    </p>
+                  </div>
+                  <div class="p-space-md rounded bg-surface-container/60 border border-outline-variant/20">
+                    <div class="flex items-center gap-space-xs text-primary font-mono-sm text-mono-sm mb-space-2xs">
+                      <span class="material-symbols-outlined text-primary text-[16px]">description</span>
+                      <span>URL CRAWLING & REPORT GENERATION</span>
+                    </div>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant">
+                      Recursively crawls website endpoints, classifies request anomalies by severity, and generates developer remediation summaries.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex flex-wrap items-center gap-space-md pt-space-md">
+                <button class="open-case-study-btn inline-flex items-center gap-space-xs px-space-md py-space-sm bg-on-surface text-surface-container-lowest font-mono-md text-mono-md font-semibold rounded hover:bg-white transition-colors shadow-md" data-case="scanner">
+                  <span>Explore Case Study</span>
+                  <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="lg:col-span-6 bg-surface-container-lowest p-space-md lg:p-space-lg flex flex-col justify-center border-t lg:border-t-0 lg:border-l border-outline-variant/30">
+              <div class="rounded-lg overflow-hidden bg-surface-dim shadow-2xl flex flex-col border border-outline-variant/30">
+                <div class="bg-surface-container px-space-md py-space-xs flex items-center justify-between">
+                  <div class="flex items-center gap-space-xs">
+                    <div class="w-2.5 h-2.5 rounded-full bg-error"></div>
+                    <div class="w-2.5 h-2.5 rounded-full bg-secondary-fixed-dim"></div>
+                    <div class="w-2.5 h-2.5 rounded-full bg-primary"></div>
+                    <span class="ml-space-sm font-mono-sm text-mono-sm text-on-surface-variant">web-inspector --target https://target-app.com</span>
+                  </div>
+                  <span class="font-mono-sm text-mono-sm text-secondary">INSPECTION_ACTIVE</span>
+                </div>
+
+                <div class="p-space-md font-mono-sm text-mono-sm space-y-space-sm text-on-surface">
+                  <div class="flex items-start gap-space-xs">
+                    <span class="text-primary font-bold">14:02:18</span>
+                    <span class="text-on-surface-variant">[INIT] Initializing URL crawler daemon and request analyzer...</span>
+                  </div>
+                  <div class="flex items-start gap-space-xs">
+                    <span class="text-primary font-bold">14:02:20</span>
+                    <span class="text-on-surface-variant">[TEST] Evaluating form inputs and request headers for anomalies...</span>
+                  </div>
+
+                  <div class="p-space-sm rounded bg-error-container/40 text-on-error-container flex flex-col gap-space-2xs border border-error/30">
+                    <div class="flex items-center justify-between font-bold">
+                      <span class="flex items-center gap-space-2xs">
+                        <span class="material-symbols-outlined text-[16px] text-error">warning</span>
+                        <span>INPUT VALIDATION ANOMALY DETECTED</span>
+                      </span>
+                      <span class="bg-error text-on-error px-space-xs rounded text-[10px]">FLAGGED</span>
+                    </div>
+                    <p class="font-mono-sm text-[11px] text-on-error-container">
+                      Endpoint: POST /api/v1/login | Query parameter sanitization recommended.
+                    </p>
+                  </div>
+
+                  <div class="flex items-start gap-space-xs">
+                    <span class="text-primary font-bold">14:02:22</span>
+                    <span class="text-on-surface-variant">[REPORT] Generating developer report with clean coding recommendations...</span>
+                  </div>
+
+                  <div class="p-space-sm rounded bg-surface-container flex flex-col gap-space-2xs">
+                    <span class="text-secondary font-semibold text-[11px] flex items-center gap-space-2xs">
+                      <span class="material-symbols-outlined text-[14px]">build_circle</span>
+                      Recommended Code Fix:
+                    </span>
+                    <pre class="font-label-code text-label-code text-on-surface-variant overflow-x-auto p-space-xs bg-surface-container-lowest rounded"><code>db.query("SELECT * FROM users WHERE email = ?", [email])</code></pre>
+                  </div>
+
+                  <div class="pt-space-xs flex flex-col gap-space-2xs">
+                    <div class="flex justify-between font-mono-sm text-mono-sm text-on-surface-variant">
+                      <span>INSPECTION SUITE</span>
+                      <span class="text-primary">100% COMPLETE</span>
+                    </div>
+                    <div class="w-full bg-surface-container-highest h-1.5 rounded-full overflow-hidden">
+                      <div class="bg-primary h-full w-full"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT 2: RENTaLUXE -->
+        <article class="flex flex-col mb-space-3xl bg-surface-container-low rounded-xl shadow-xl overflow-hidden border border-outline-variant/30">
+          <div class="flex flex-wrap items-center justify-between px-space-lg py-space-sm bg-surface-container gap-space-sm">
+            <div class="flex items-center gap-space-sm">
+              <span class="inline-flex items-center gap-space-xs px-space-xs py-space-2xs rounded bg-primary/10 text-primary font-mono-sm text-mono-sm">
+                <span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+                MERN_FULLSTACK_APP
+              </span>
+              <span class="font-mono-sm text-mono-sm text-on-surface-variant">MONGODB • EXPRESS • REACT • NODE</span>
+            </div>
+            <div class="flex items-center gap-space-md font-mono-sm text-mono-sm text-on-surface-variant">
+              <span>RENTAL MANAGEMENT</span>
+              <span class="text-surface-container-highest">/</span>
+              <span>RESTFUL APIS</span>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-0">
+            <div class="lg:col-span-6 p-space-lg lg:p-space-xl flex flex-col justify-between">
+              <div>
+                <div class="flex items-baseline gap-space-sm mb-space-2xs">
+                  <span class="font-mono-md text-mono-md text-primary font-bold">02 —</span>
+                  <h3 class="font-headline-lg text-headline-lg text-on-surface">RENTaLUXE</h3>
+                </div>
+                <p class="font-mono-md text-mono-md text-secondary mb-space-md">
+                  MERN Full-Stack Rental Web Application
+                </p>
+                <p class="font-body-md text-body-md text-on-surface-variant mb-space-lg leading-relaxed">
+                  Built a MERN full-stack rental web application using MongoDB, Express.js, React.js, and Node.js. Features rental listing management, responsive UI, RESTful APIs, user booking state management, and database-driven functionality.
+                </p>
+
+                <div class="flex flex-wrap gap-space-xs mb-space-xl">
+                  <span class="px-space-sm py-space-2xs rounded bg-surface-container text-on-surface font-mono-sm text-mono-sm">MongoDB</span>
+                  <span class="px-space-sm py-space-2xs rounded bg-surface-container text-on-surface font-mono-sm text-mono-sm">Express.js</span>
+                  <span class="px-space-sm py-space-2xs rounded bg-surface-container text-on-surface font-mono-sm text-mono-sm">React.js</span>
+                  <span class="px-space-sm py-space-2xs rounded bg-surface-container text-on-surface font-mono-sm text-mono-sm">Node.js</span>
+                  <span class="px-space-sm py-space-2xs rounded bg-surface-container text-on-surface font-mono-sm text-mono-sm">RESTful APIs</span>
+                </div>
+
+                <div class="space-y-space-sm mb-space-xl">
+                  <div class="p-space-md rounded bg-surface-container/60 border border-outline-variant/20">
+                    <div class="flex items-center gap-space-xs text-primary font-mono-sm text-mono-sm mb-space-2xs">
+                      <span class="material-symbols-outlined text-primary text-[16px]">apartment</span>
+                      <span>RENTAL LISTING MANAGEMENT</span>
+                    </div>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant">
+                      Enables seamless listing creation, updates, category filtering, and rental property availability tracking via database APIs.
+                    </p>
+                  </div>
+                  <div class="p-space-md rounded bg-surface-container/60 border border-outline-variant/20">
+                    <div class="flex items-center gap-space-xs text-secondary font-mono-sm text-mono-sm mb-space-2xs">
+                      <span class="material-symbols-outlined text-secondary text-[16px]">devices</span>
+                      <span>RESPONSIVE UI & DATABASE APIS</span>
+                    </div>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant">
+                      Designed with an intuitive, mobile-friendly React frontend connected to structured Node/Express RESTful routes and MongoDB collections.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex flex-wrap items-center gap-space-md pt-space-md">
+                <button class="open-case-study-btn inline-flex items-center gap-space-xs px-space-md py-space-sm bg-on-surface text-surface-container-lowest font-mono-md text-mono-md font-semibold rounded hover:bg-white transition-colors shadow-md" data-case="rentaluxe">
+                  <span>Explore Case Study</span>
+                  <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                </button>
+                <a href="https://rentaluxe-mern-website.onrender.com/" target="_blank" rel="noopener" class="inline-flex items-center gap-space-xs px-space-md py-space-sm bg-primary text-on-primary font-mono-md text-mono-md font-semibold rounded hover:bg-primary-fixed transition-colors shadow-md">
+                  <span>Live Demo</span>
+                  <span class="material-symbols-outlined text-[16px]">open_in_new</span>
+                </a>
+                <a href="https://github.com/govinduu-ui/RENTaLUXE-MERN-Website-.git" target="_blank" rel="noopener" class="inline-flex items-center gap-space-xs px-space-md py-space-sm bg-surface-container text-on-surface font-mono-md text-mono-md rounded hover:bg-surface-container-high transition-colors">
+                  <span>GitHub Source</span>
+                  <span class="material-symbols-outlined text-[16px]">code</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="lg:col-span-6 bg-surface-container-lowest p-space-md lg:p-space-lg flex flex-col justify-center border-t lg:border-t-0 lg:border-l border-outline-variant/30">
+              <div class="rounded-lg overflow-hidden bg-surface-container shadow-2xl flex flex-col border border-outline-variant/30">
+                <div class="bg-surface-container-high px-space-md py-space-xs flex items-center justify-between">
+                  <div class="flex items-center gap-space-xs">
+                    <span class="w-2.5 h-2.5 rounded-full bg-error/60"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-secondary/40"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-primary/40"></span>
+                    <span class="ml-space-sm font-mono-sm text-mono-sm text-on-surface-variant">https://rentaluxe-mern-website.onrender.com/</span>
+                  </div>
+                  <span class="font-mono-sm text-mono-sm text-primary">MERN STACK // LIVE</span>
+                </div>
+
+                <div class="relative w-full h-72 sm:h-80 bg-surface-container-low p-space-md flex flex-col justify-between">
+                  <div class="flex items-center justify-between border-b border-outline-variant/30 pb-space-xs">
+                    <div class="flex items-center gap-space-xs font-mono-sm text-mono-sm text-on-surface font-semibold">
+                      <span class="material-symbols-outlined text-primary text-[18px]">home_work</span>
+                      <span>RENTaLUXE // PROPERTY LISTINGS</span>
+                    </div>
+                    <span class="text-secondary font-mono-sm">REST API CONNECTED</span>
+                  </div>
+
+                  <div class="grid grid-cols-3 gap-space-sm py-space-sm">
+                    <div class="bg-surface-container p-space-sm rounded">
+                      <div class="text-on-surface-variant font-mono-sm text-[10px]">STACK</div>
+                      <div class="text-primary font-headline-sm text-headline-sm font-bold">MERN</div>
+                    </div>
+                    <div class="bg-surface-container p-space-sm rounded">
+                      <div class="text-on-surface-variant font-mono-sm text-[10px]">DATABASE</div>
+                      <div class="text-on-surface font-headline-sm text-headline-sm font-bold">MongoDB</div>
+                    </div>
+                    <div class="bg-surface-container p-space-sm rounded">
+                      <div class="text-on-surface-variant font-mono-sm text-[10px]">ROUTING</div>
+                      <div class="text-secondary font-headline-sm text-headline-sm font-bold">Express</div>
+                    </div>
+                  </div>
+
+                  <div class="bg-surface-container p-space-sm rounded flex-1 flex flex-col justify-between">
+                    <div class="flex items-center justify-between text-on-surface-variant font-mono-sm">
+                      <span>Rental Property Database Status</span>
+                      <span class="text-primary">100% Operational</span>
+                    </div>
+                    <div class="flex items-end gap-space-xs h-20 pt-space-xs">
+                      <div class="flex-1 bg-primary/20 rounded-t h-[40%]" title="Listings Active"></div>
+                      <div class="flex-1 bg-primary/30 rounded-t h-[55%]" title="Bookings Processing"></div>
+                      <div class="flex-1 bg-primary/40 rounded-t h-[45%]" title="API Responses"></div>
+                      <div class="flex-1 bg-primary/60 rounded-t h-[75%]" title="Express Router"></div>
+                      <div class="flex-1 bg-primary/80 rounded-t h-[65%]" title="React State"></div>
+                      <div class="flex-1 bg-primary rounded-t h-[95%]" title="MongoDB Store"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="p-space-md bg-surface-container-lowest font-mono-sm text-mono-sm text-on-surface-variant space-y-space-2xs">
+                  <div class="flex justify-between text-on-surface">
+                    <span class="text-primary font-semibold">&gt; GET /api/v1/properties</span>
+                    <span class="text-on-surface-variant">HTTP 200 OK</span>
+                  </div>
+                  <div class="flex justify-between text-on-surface-variant/80">
+                    <span>Response Payload: 12 Rental Items</span>
+                    <span class="text-primary">Time: 24ms</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT 3: MYSHIP App Website -->
+        <article class="flex flex-col bg-surface-container-low rounded-xl shadow-xl overflow-hidden border border-outline-variant/30">
+          <div class="flex flex-wrap items-center justify-between px-space-lg py-space-sm bg-surface-container gap-space-sm">
+            <div class="flex items-center gap-space-sm">
+              <span class="inline-flex items-center gap-space-xs px-space-xs py-space-2xs rounded bg-secondary/10 text-secondary font-mono-sm text-mono-sm">
+                <span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+                FRONTEND_LANDING_PAGE
+              </span>
+              <span class="font-mono-sm text-mono-sm text-on-surface-variant">MOBILE APP PORTAL</span>
+            </div>
+            <div class="flex items-center gap-space-md font-mono-sm text-mono-sm text-on-surface-variant">
+              <span>GOOGLE PLAY STORE</span>
+              <span class="text-surface-container-highest">/</span>
+              <span>RESPONSIVE</span>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-0">
+            <div class="lg:col-span-6 p-space-lg lg:p-space-xl flex flex-col justify-between">
+              <div>
+                <div class="flex items-baseline gap-space-sm mb-space-2xs">
+                  <span class="font-mono-md text-mono-md text-secondary font-bold">03 —</span>
+                  <h3 class="font-headline-lg text-headline-lg text-on-surface">MYSHIP App Website</h3>
+                </div>
+                <p class="font-mono-md text-mono-md text-secondary mb-space-md">
+                  Responsive App Landing Page & Mobile Store Downloads
+                </p>
+                <p class="font-body-md text-body-md text-on-surface-variant mb-space-lg leading-relaxed">
+                  Developed a responsive frontend landing page for the MYSHIP application. Designed with clear call-to-action sections and a direct link to download the mobile application from the Google Play Store.
+                </p>
+
+                <div class="flex flex-wrap gap-space-xs mb-space-lg">
+                  <span class="px-space-sm py-space-2xs rounded bg-surface-container text-on-surface font-mono-sm text-mono-sm">HTML5</span>
+                  <span class="px-space-sm py-space-2xs rounded bg-surface-container text-on-surface font-mono-sm text-mono-sm">CSS3</span>
+                  <span class="px-space-sm py-space-2xs rounded bg-surface-container text-on-surface font-mono-sm text-mono-sm">JavaScript</span>
+                  <span class="px-space-sm py-space-2xs rounded bg-surface-container text-on-surface font-mono-sm text-mono-sm">Responsive UI</span>
+                  <span class="px-space-sm py-space-2xs rounded bg-surface-container text-on-surface font-mono-sm text-mono-sm">Google Play Store</span>
+                </div>
+
+                <div class="grid grid-cols-1 gap-space-sm mb-space-xl">
+                  <div class="bg-surface-container/60 p-space-sm rounded border border-outline-variant/20">
+                    <span class="font-mono-sm text-mono-sm text-on-surface-variant block">GOOGLE PLAY STORE</span>
+                    <span class="font-headline-sm text-headline-sm text-primary font-bold">Official Application Download</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex flex-wrap items-center gap-space-md pt-space-md">
+                <button class="open-case-study-btn inline-flex items-center gap-space-xs px-space-md py-space-sm bg-on-surface text-surface-container-lowest font-mono-md text-mono-md font-semibold rounded hover:bg-white transition-colors shadow-md" data-case="myship">
+                  <span>Explore Case Study</span>
+                  <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                </button>
+                <a href="https://play.google.com/store/apps/details?id=com.marinesite.app&hl=en_IN" target="_blank" rel="noopener" class="inline-flex items-center gap-space-xs px-space-md py-space-sm bg-primary text-on-primary font-mono-md text-mono-md font-semibold rounded hover:bg-primary-fixed transition-colors shadow-md">
+                  <span>Google Play Store</span>
+                  <span class="material-symbols-outlined text-[16px]">open_in_new</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="lg:col-span-6 bg-surface-container-lowest p-space-md lg:p-space-lg flex flex-col justify-center border-t lg:border-t-0 lg:border-l border-outline-variant/30">
+              <div class="rounded-lg overflow-hidden bg-surface-container p-space-lg space-y-space-md border border-outline-variant/30 text-center">
+                <div class="w-12 h-12 rounded-full bg-primary/20 text-primary mx-auto flex items-center justify-center">
+                  <span class="material-symbols-outlined text-[28px]">local_shipping</span>
+                </div>
+                <h4 class="font-headline-md text-headline-md text-on-surface font-bold">MYSHIP Mobile Application</h4>
+                <p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm mx-auto">
+                  Download the MYSHIP mobile application directly from the Google Play Store.
+                </p>
+
+                <div class="flex items-center justify-center gap-space-md pt-space-xs">
+                  <a href="https://play.google.com/store/apps/details?id=com.marinesite.app&hl=en_IN" target="_blank" rel="noopener" class="w-full sm:w-auto px-space-lg py-space-sm bg-surface-container-high border border-primary/60 rounded-lg flex items-center justify-center gap-space-xs text-on-surface hover:border-primary transition-colors shadow-md">
+                    <span class="material-symbols-outlined text-primary text-[24px]">android</span>
+                    <div class="text-left font-mono-sm">
+                      <div class="text-[10px] text-on-surface-variant uppercase">GET IT ON</div>
+                      <div class="font-bold text-mono-md text-primary">Google Play</div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- SECTION 06: CERTIFICATIONS -->
+      <section id="certifications" class="w-full relative py-space-xl scroll-mt-20">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-2xl">
+          <div class="flex flex-col gap-space-xs max-w-2xl">
+            <div class="flex items-center gap-space-sm font-mono-sm text-mono-sm text-primary">
+              <span class="text-on-surface-variant font-mono-sm">06 //</span>
+              <span class="tracking-widest uppercase font-mono-sm">VERIFIED CERTIFICATIONS</span>
+              <span class="w-1.5 h-1.5 rounded-full bg-primary inline-block"></span>
+            </div>
+            <h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight font-semibold">
+              Certifications & Accreditations
+            </h2>
+            <p class="font-body-md text-body-md text-on-surface-variant">
+              Verified certifications in MERN full-stack development, software tools, and engineering computation.
+            </p>
+          </div>
+
+          <div class="flex items-center gap-space-md p-space-sm bg-surface-container-low rounded-lg self-start md:self-auto shadow-sm border border-outline-variant/30">
+            <div class="w-10 h-10 rounded bg-primary/10 flex items-center justify-center text-primary shrink-0">
+              <span class="material-symbols-outlined text-primary">verified_user</span>
+            </div>
+            <div class="flex flex-col font-mono-sm text-mono-sm pr-space-xs">
+              <span class="text-on-surface font-mono-md text-mono-md">3/3 VERIFIED</span>
+              <span class="text-on-surface-variant text-[11px] tracking-wide">OFFICIAL ISSUER ATTESTED</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+          <!-- ETHNUS MERN -->
+          <div class="group relative flex flex-col justify-between p-space-lg bg-surface-container-low hover:bg-surface-container transition-all duration-200 rounded-lg shadow-sm hover:shadow-md cursor-default border border-outline-variant/30">
+            <div class="flex flex-col gap-space-md">
+              <div class="flex items-center justify-between font-mono-sm text-mono-sm">
+                <span class="px-space-xs py-space-2xs bg-surface-container-highest text-on-surface-variant rounded tracking-wider uppercase font-medium">ETHNUS</span>
+                <span class="text-primary font-mono-sm">07/2026</span>
+              </div>
+              <div class="flex flex-col gap-space-2xs">
+                <h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors duration-150 leading-snug">
+                  MERN FullStack Development
+                </h3>
+                <span class="font-mono-sm text-mono-sm text-on-surface-variant">Ethnus Training Program</span>
+              </div>
+              <p class="font-body-sm text-body-sm text-on-surface-variant">
+                Hands-on training in React.js, Node.js, Express.js, MongoDB, REST APIs, database integration, responsive UI development, and full-stack application deployment.
+              </p>
+              <div class="flex flex-wrap gap-space-2xs pt-space-xs">
+                <span class="px-space-xs py-space-2xs bg-surface-container rounded font-mono-sm text-mono-sm text-on-surface-variant">React.js</span>
+                <span class="px-space-xs py-space-2xs bg-surface-container rounded font-mono-sm text-mono-sm text-on-surface-variant">Node.js</span>
+                <span class="px-space-xs py-space-2xs bg-surface-container rounded font-mono-sm text-mono-sm text-on-surface-variant">MongoDB</span>
+              </div>
+            </div>
+            <div class="pt-space-md mt-space-md flex items-center justify-between font-mono-sm text-mono-sm bg-surface-container-lowest/40 -mx-space-lg -mb-space-lg p-space-md rounded-b-lg border-t border-outline-variant/20">
+              <div class="flex flex-col truncate pr-space-xs">
+                <span class="text-[10px] uppercase text-on-surface-variant/70">ISSUER</span>
+                <span class="font-label-code text-label-code text-on-surface truncate">ETHNUS-MERN-FULLSTACK</span>
+              </div>
+              <button class="verify-cert-btn inline-flex items-center gap-space-2xs text-primary hover:text-primary-fixed transition-colors shrink-0" data-cert-id="ETHNUS-MERN-072026" data-cert-name="MERN FullStack Development" data-issuer="Ethnus" data-date="07/2026">
+                <span class="font-mono-sm text-mono-sm">Verify</span>
+                <span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- MATHWORKS MATLAB -->
+          <div class="group relative flex flex-col justify-between p-space-lg bg-surface-container-low hover:bg-surface-container transition-all duration-200 rounded-lg shadow-sm hover:shadow-md cursor-default border border-outline-variant/30">
+            <div class="flex flex-col gap-space-md">
+              <div class="flex items-center justify-between font-mono-sm text-mono-sm">
+                <span class="px-space-xs py-space-2xs bg-surface-container-highest text-on-surface-variant rounded tracking-wider uppercase font-medium">MATHWORKS</span>
+                <span class="text-primary font-mono-sm">08/2024</span>
+              </div>
+              <div class="flex flex-col gap-space-2xs">
+                <h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors duration-150 leading-snug">
+                  MATLAB Onramp Certificate
+                </h3>
+                <span class="font-mono-sm text-mono-sm text-on-surface-variant">MathWorks Official</span>
+              </div>
+              <p class="font-body-sm text-body-sm text-on-surface-variant">
+                Hands-on training covering MATLAB fundamentals, data analysis, visualization, scripting, functions, and basic programming concepts for engineering problems.
+              </p>
+              <div class="flex flex-wrap gap-space-2xs pt-space-xs">
+                <span class="px-space-xs py-space-2xs bg-surface-container rounded font-mono-sm text-mono-sm text-on-surface-variant">MATLAB</span>
+                <span class="px-space-xs py-space-2xs bg-surface-container rounded font-mono-sm text-mono-sm text-on-surface-variant">Data Analysis</span>
+                <span class="px-space-xs py-space-2xs bg-surface-container rounded font-mono-sm text-mono-sm text-on-surface-variant">Scripting</span>
+              </div>
+            </div>
+            <div class="pt-space-md mt-space-md flex items-center justify-between font-mono-sm text-mono-sm bg-surface-container-lowest/40 -mx-space-lg -mb-space-lg p-space-md rounded-b-lg border-t border-outline-variant/20">
+              <div class="flex flex-col truncate pr-space-xs">
+                <span class="text-[10px] uppercase text-on-surface-variant/70">ISSUER</span>
+                <span class="font-label-code text-label-code text-on-surface truncate">MATHWORKS-ONRAMP</span>
+              </div>
+              <button class="verify-cert-btn inline-flex items-center gap-space-2xs text-primary hover:text-primary-fixed transition-colors shrink-0" data-cert-id="MATHWORKS-MATLAB-082024" data-cert-name="MATLAB Onramp Certificate" data-issuer="MathWorks" data-date="08/2024">
+                <span class="font-mono-sm text-mono-sm">Verify</span>
+                <span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- DELOITTE VIRTUAL INTERNSHIP -->
+          <div class="group relative flex flex-col justify-between p-space-lg bg-surface-container-low hover:bg-surface-container transition-all duration-200 rounded-lg shadow-sm hover:shadow-md cursor-default border border-outline-variant/30">
+            <div class="flex flex-col gap-space-md">
+              <div class="flex items-center justify-between font-mono-sm text-mono-sm">
+                <span class="px-space-xs py-space-2xs bg-surface-container-highest text-on-surface-variant rounded tracking-wider uppercase font-medium">DELOITTE</span>
+                <span class="text-primary font-mono-sm">2024</span>
+              </div>
+              <div class="flex flex-col gap-space-2xs">
+                <h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors duration-150 leading-snug">
+                  Technology Virtual Internship
+                </h3>
+                <span class="font-mono-sm text-mono-sm text-on-surface-variant">Deloitte Remote Program</span>
+              </div>
+              <p class="font-body-sm text-body-sm text-on-surface-variant">
+                Practical virtual internship covering technology consulting workflows, software architecture analysis, data modeling, and enterprise tech practices.
+              </p>
+              <div class="flex flex-wrap gap-space-2xs pt-space-xs">
+                <span class="px-space-xs py-space-2xs bg-surface-container rounded font-mono-sm text-mono-sm text-on-surface-variant">Tech Consulting</span>
+                <span class="px-space-xs py-space-2xs bg-surface-container rounded font-mono-sm text-mono-sm text-on-surface-variant">Architecture</span>
+                <span class="px-space-xs py-space-2xs bg-surface-container rounded font-mono-sm text-mono-sm text-on-surface-variant">Enterprise</span>
+              </div>
+            </div>
+            <div class="pt-space-md mt-space-md flex items-center justify-between font-mono-sm text-mono-sm bg-surface-container-lowest/40 -mx-space-lg -mb-space-lg p-space-md rounded-b-lg border-t border-outline-variant/20">
+              <div class="flex flex-col truncate pr-space-xs">
+                <span class="text-[10px] uppercase text-on-surface-variant/70">ISSUER</span>
+                <span class="font-label-code text-label-code text-on-surface truncate">DELOITTE-TECH-INTERN</span>
+              </div>
+              <button class="verify-cert-btn inline-flex items-center gap-space-2xs text-primary hover:text-primary-fixed transition-colors shrink-0" data-cert-id="DELOITTE-TECH-2024" data-cert-name="Technology Virtual Internship" data-issuer="Deloitte" data-date="2024-05-10">
+                <span class="font-mono-sm text-mono-sm">Verify</span>
+                <span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-space-lg flex flex-col sm:flex-row items-center justify-between p-space-md bg-surface-container-lowest rounded-lg font-mono-sm text-mono-sm text-on-surface-variant gap-space-sm shadow-sm border border-outline-variant/30">
+          <div class="flex items-center gap-space-sm">
+            <span class="material-symbols-outlined text-primary text-[18px]">terminal</span>
+            <span class="text-on-surface">Continuous Learning:</span>
+            <span class="text-on-surface-variant">Certified credentials issued by Ethnus, MathWorks, and Deloitte</span>
+          </div>
+          <div class="flex items-center gap-space-md self-end sm:self-auto text-primary">
+            <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+            <span class="font-mono-sm text-mono-sm text-on-surface">Verified Academic Records</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 07: CONTACT -->
+      <section id="contact" class="w-full relative py-space-xl scroll-mt-20">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl lg:gap-space-2xl items-start">
+          <div class="lg:col-span-5 flex flex-col gap-space-lg">
+            <div class="flex items-center gap-space-xs font-mono-sm text-mono-sm text-primary uppercase tracking-widest">
+              <span>07</span>
+              <span class="text-outline-variant">/</span>
+              <span>GET IN TOUCH</span>
+            </div>
+
+            <h2 class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight">
+              Initiate Contact with Govinda Das
+            </h2>
+
+            <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+              Open for Software Engineering Internships, MERN Full-Stack roles, Frontend Web Development, and technical software projects.
+            </p>
+
+            <div class="flex flex-col gap-space-md pt-space-xs">
+              <div class="flex items-start gap-space-md p-space-md bg-surface-container-low rounded-lg border border-outline-variant/30">
+                <span class="material-symbols-outlined text-primary text-[24px]">mail</span>
+                <div class="flex flex-col">
+                  <span class="font-mono-sm text-mono-sm text-on-surface-variant uppercase">DIRECT EMAIL</span>
+                  <a href="mailto:govindakku12@gmail.com" class="font-mono-md text-mono-md text-on-surface hover:text-primary font-semibold transition-colors">govindakku12@gmail.com</a>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-space-md p-space-md bg-surface-container-low rounded-lg border border-outline-variant/30">
+                <span class="material-symbols-outlined text-primary text-[24px]">call</span>
+                <div class="flex flex-col">
+                  <span class="font-mono-sm text-mono-sm text-on-surface-variant uppercase">PHONE NUMBER</span>
+                  <a href="tel:+918111867720" class="font-mono-md text-mono-md text-on-surface hover:text-primary font-semibold transition-colors">+91 8111867720</a>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-space-md p-space-md bg-surface-container-low rounded-lg border border-outline-variant/30">
+                <span class="material-symbols-outlined text-secondary text-[24px]">location_on</span>
+                <div class="flex flex-col">
+                  <span class="font-mono-sm text-mono-sm text-on-surface-variant uppercase">LOCATION & TIMEZONE</span>
+                  <span class="font-mono-md text-mono-md text-on-surface font-semibold">Cherthala, Alappuzha, Kerala, India</span>
+                  <span class="font-body-sm text-body-sm text-on-surface-variant">Timezone: IST (UTC +5:30)</span>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-space-md p-space-md bg-surface-container-low rounded-lg border border-outline-variant/30">
+                <span class="material-symbols-outlined text-primary text-[24px]">link</span>
+                <div class="flex flex-col">
+                  <span class="font-mono-sm text-mono-sm text-on-surface-variant uppercase">PROFILES & NETWORKS</span>
+                  <div class="flex items-center gap-space-md mt-space-2xs">
+                    <a href="https://linkedin.com/in/govinda-das-309557324/" target="_blank" rel="noopener" class="font-mono-md text-mono-md text-on-surface hover:text-primary underline">LinkedIn Profile</a>
+                    <a href="https://github.com/govinduu-ui" target="_blank" rel="noopener" class="font-mono-md text-mono-md text-on-surface hover:text-primary underline">GitHub</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-7 bg-surface-container-low p-space-lg lg:p-space-xl rounded-xl shadow-xl border border-outline-variant/30">
+            <h3 class="font-headline-md text-headline-md text-on-surface mb-space-xs font-semibold">
+              Send a Message
+            </h3>
+            <p class="font-body-md text-body-md text-on-surface-variant mb-space-lg">
+              Fill out the form below to reach out directly to Govinda Das.
+            </p>
+
+            <form id="contact-form" class="space-y-space-md" novalidate>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+                <div class="flex flex-col gap-space-xs">
+                  <label for="form-name" class="font-mono-sm text-mono-sm text-on-surface-variant uppercase">YOUR NAME *</label>
+                  <input type="text" id="form-name" required placeholder="e.g. Recruiter / Hiring Manager" class="w-full px-space-md py-space-sm bg-surface-container border border-outline-variant/60 rounded text-on-surface font-body-md focus:border-primary focus:outline-none transition-colors" />
+                </div>
+                <div class="flex flex-col gap-space-xs">
+                  <label for="form-email" class="font-mono-sm text-mono-sm text-on-surface-variant uppercase">EMAIL ADDRESS *</label>
+                  <input type="email" id="form-email" required placeholder="name@company.com" class="w-full px-space-md py-space-sm bg-surface-container border border-outline-variant/60 rounded text-on-surface font-body-md focus:border-primary focus:outline-none transition-colors" />
+                </div>
+              </div>
+
+              <div class="flex flex-col gap-space-xs">
+                <label for="form-inquiry-type" class="font-mono-sm text-mono-sm text-on-surface-variant uppercase">INQUIRY CATEGORY *</label>
+                <select id="form-inquiry-type" required class="w-full px-space-md py-space-sm bg-surface-container border border-outline-variant/60 rounded text-on-surface font-body-md focus:border-primary focus:outline-none transition-colors">
+                  <option value="recruitment">SWE / MERN Full-Stack Opportunity</option>
+                  <option value="fullstack">Full-Stack Web Development Project</option>
+                  <option value="frontend">Frontend / React.js UI Engineering</option>
+                  <option value="other">General Engineering Inquiry</option>
+                </select>
+              </div>
+
+              <div class="flex flex-col gap-space-xs">
+                <label for="form-subject" class="font-mono-sm text-mono-sm text-on-surface-variant uppercase">SUBJECT *</label>
+                <input type="text" id="form-subject" required placeholder="e.g. Software Engineering Opportunity" class="w-full px-space-md py-space-sm bg-surface-container border border-outline-variant/60 rounded text-on-surface font-body-md focus:border-primary focus:outline-none transition-colors" />
+              </div>
+
+              <div class="flex flex-col gap-space-xs">
+                <label for="form-message" class="font-mono-sm text-mono-sm text-on-surface-variant uppercase">MESSAGE *</label>
+                <textarea id="form-message" required rows="4" placeholder="Briefly describe your team, opportunity, or project details..." class="w-full px-space-md py-space-sm bg-surface-container border border-outline-variant/60 rounded text-on-surface font-body-md focus:border-primary focus:outline-none transition-colors resize-y"></textarea>
+              </div>
+
+              <div class="pt-space-xs flex items-center justify-between">
+                <span class="font-mono-sm text-mono-sm text-on-surface-variant" id="form-status-msg">
+                  Required fields are marked with *
+                </span>
+                <button type="submit" id="form-submit-btn" class="inline-flex items-center gap-space-xs px-space-xl py-space-md bg-primary text-on-primary font-mono-md text-mono-md font-semibold rounded hover:bg-primary-fixed transition-all shadow-md">
+                  <span>Send Message</span>
+                  <span class="material-symbols-outlined text-[16px]">send</span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="w-full bg-surface-container-lowest border-t border-outline-variant/30 mt-space-3xl">
+    <div class="max-w-max-content-width mx-auto px-gutter-mobile lg:px-gutter-desktop py-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md font-mono-sm text-mono-sm text-on-surface-variant">
+      <div class="flex items-center gap-space-xs text-center md:text-left">
+        <span class="text-on-surface">© 2026 Govinda Das</span>
+        <span>—</span>
+        <span>Software & MERN Full-Stack Engineer</span>
+      </div>
+      <div class="flex items-center gap-space-md">
+        <span class="hidden sm:inline text-on-surface-variant/70">VIT Bhopal University • Alappuzha, Kerala</span>
+        <span class="hidden sm:inline text-outline-variant">|</span>
+        <div class="flex items-center gap-space-base">
+          <a class="text-on-surface-variant hover:text-primary transition-colors duration-150" href="https://linkedin.com/in/govinda-das-309557324/" rel="noopener noreferrer" target="_blank">LinkedIn</a>
+          <a class="text-on-surface-variant hover:text-primary transition-colors duration-150" href="https://github.com/govinduu-ui" rel="noopener noreferrer" target="_blank">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- RESUME MODAL -->
+  <div id="resume-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-space-md bg-surface-container-lowest/80 backdrop-blur-md overflow-y-auto">
+    <div class="bg-surface-container-low rounded-xl max-w-3xl w-full border border-outline-variant/50 shadow-2xl overflow-hidden flex flex-col max-h-[90vh]">
+      <div class="bg-surface-container px-space-lg py-space-md flex items-center justify-between border-b border-outline-variant/30">
+        <div class="flex items-center gap-space-xs font-mono-sm text-mono-sm text-primary font-semibold">
+          <span class="material-symbols-outlined text-[18px]">description</span>
+          <span>GOVINDA_DAS_RESUME.PDF</span>
+        </div>
+        <div class="flex items-center gap-space-sm">
+          <button id="print-resume-btn" class="inline-flex items-center gap-space-2xs px-space-sm py-space-2xs rounded bg-surface-container-high text-on-surface hover:text-primary font-mono-sm text-mono-sm">
+            <span class="material-symbols-outlined text-[14px]">print</span>
+            <span>Print</span>
+          </button>
+          <button id="close-resume-btn" class="p-space-xs text-on-surface-variant hover:text-on-surface">
+            <span class="material-symbols-outlined text-[20px]">close</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="p-space-xl overflow-y-auto space-y-space-lg text-on-surface font-body-md">
+        <div class="border-b border-outline-variant/30 pb-space-md flex flex-col sm:flex-row sm:items-end justify-between gap-space-sm">
+          <div class="flex items-center gap-space-md">
+            <img src="profile.jpg" alt="Govinda Das" class="w-14 h-14 sm:w-16 sm:h-16 rounded-xl object-cover border border-primary/50 shrink-0" />
+            <div>
+              <h2 class="font-display text-headline-lg font-bold">GOVINDA DAS</h2>
+              <p class="font-mono-md text-primary">Computer Science Student & MERN Full-Stack Engineer</p>
+            </div>
+          </div>
+          <div class="font-mono-sm text-on-surface-variant text-right">
+            <div>Cherthala, Alappuzha, Kerala 688529</div>
+            <div>8111867720 • govindakku12@gmail.com</div>
+            <div>linkedin.com/in/govinda-das-309557324/</div>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="font-mono-sm text-mono-sm uppercase text-outline tracking-wider mb-space-2xs">PROFESSIONAL SUMMARY</h3>
+          <p class="font-body-sm text-on-surface-variant leading-relaxed">
+            B.Tech Computer Science student with hands-on experience in MERN full-stack development, Python software systems, and frontend engineering. Interested in building scalable, performant, and user-focused web applications.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="font-mono-sm text-mono-sm uppercase text-outline tracking-wider mb-space-2xs">EDUCATION</h3>
+          <div class="space-y-space-xs">
+            <div>
+              <div class="flex justify-between font-headline-sm text-headline-sm">
+                <span class="font-bold">B.Tech, Computer Science</span>
+                <span class="font-mono-sm text-primary">09/2024 — Present</span>
+              </div>
+              <p class="font-body-sm text-on-surface-variant">VIT Bhopal (Sehore, Madhya Pradesh) • GPA: 8.23 / 10</p>
+            </div>
+            <div>
+              <div class="flex justify-between font-headline-sm text-headline-sm">
+                <span class="font-bold">PCM | Higher Secondary</span>
+                <span class="font-mono-sm text-primary">06/2022 — 05/2024</span>
+              </div>
+              <p class="font-body-sm text-on-surface-variant">Sree Sankara English Medium School (Alappuzha, Kerala) • GPA: 7.8 / 10</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="font-mono-sm text-mono-sm uppercase text-outline tracking-wider mb-space-2xs">WORK EXPERIENCE</h3>
+          <div>
+            <div class="flex justify-between font-headline-sm text-headline-sm">
+              <span class="font-bold">Technology Virtual Intern — Deloitte</span>
+              <span class="font-mono-sm text-secondary">Remote</span>
+            </div>
+            <p class="font-body-sm text-on-surface-variant">Practical virtual internship in enterprise technology analysis, software architecture workflows, and consulting fundamentals.</p>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="font-mono-sm text-mono-sm uppercase text-outline tracking-wider mb-space-2xs">TECHNICAL SKILLS</h3>
+          <ul class="font-body-sm text-on-surface-variant space-y-1">
+            <li><strong class="text-on-surface">Programming:</strong> Python, C++, JavaScript, HTML, CSS</li>
+            <li><strong class="text-on-surface">Frameworks & Runtime:</strong> React, Node.js, Express.js (MERN)</li>
+            <li><strong class="text-on-surface">Web Engineering:</strong> RESTful APIs, Single-Page Applications, Responsive UI, DOM Manipulation</li>
+            <li><strong class="text-on-surface">Databases & Tools:</strong> MongoDB, SQL, Git, Linux CLI, Postman</li>
+            <li><strong class="text-on-surface">Soft Skills:</strong> Communication, Decision Making</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="font-mono-sm text-mono-sm uppercase text-outline tracking-wider mb-space-2xs">PROJECTS</h3>
+          <div class="space-y-space-sm">
+            <div>
+              <div class="flex justify-between font-headline-sm text-headline-sm">
+                <span class="font-bold">Website Vulnerability Scanner</span>
+                <span class="font-mono-sm text-secondary">Python / Web Development</span>
+              </div>
+              <p class="font-body-sm text-on-surface-variant">• Developed an automated web application security scanner for vulnerability testing.</p>
+              <p class="font-body-sm text-on-surface-variant">• Detected SQL Injection, Cross-Site Scripting (XSS), insecure HTTP headers, authentication issues, and input validation flaws.</p>
+              <p class="font-body-sm text-on-surface-variant">• Implemented URL crawling, request analysis, severity classification, and detailed reports with CVE references and remediation recommendations.</p>
+            </div>
+
+            <div>
+              <div class="flex justify-between font-headline-sm text-headline-sm">
+                <span class="font-bold">MYSHIP App Website</span>
+                <span class="font-mono-sm text-secondary">Frontend / HTML / CSS / JS</span>
+              </div>
+              <p class="font-body-sm text-on-surface-variant">• Developed a responsive frontend landing page for the application with a direct link to download the app from the Google Play Store.</p>
+            </div>
+
+            <div>
+              <div class="flex justify-between font-headline-sm text-headline-sm">
+                <span class="font-bold">RENTaLUXE</span>
+                <span class="font-mono-sm text-secondary">MERN Stack (Mongo, Express, React, Node)</span>
+              </div>
+              <p class="font-body-sm text-on-surface-variant">• Built a MERN full-stack rental web application using MongoDB, Express.js, React.js, and Node.js with rental listing management, responsive UI, RESTful APIs, and database-driven functionality.</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="font-mono-sm text-mono-sm uppercase text-outline tracking-wider mb-space-2xs">CERTIFICATIONS</h3>
+          <ul class="font-body-sm text-on-surface-variant space-y-1">
+            <li><strong class="text-on-surface">MERN FullStack Development — Ethnus (07/2026):</strong> Hands-on training in React.js, Node.js, Express.js, MongoDB, REST APIs, database integration, responsive UI development, and full-stack application deployment.</li>
+            <li><strong class="text-on-surface">MATLAB Onramp Certificate — MathWorks (08/2024):</strong> Hands-on training covering MATLAB fundamentals, data analysis, visualization, scripting, functions, and engineering problem-solving.</li>
+            <li><strong class="text-on-surface">Technology Virtual Internship — Deloitte (2024):</strong> Practical virtual internship covering technology consulting workflows, architecture analysis, and software practices.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CASE STUDY MODAL -->
+  <div id="case-study-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-space-md bg-surface-container-lowest/80 backdrop-blur-md overflow-y-auto">
+    <div class="bg-surface-container-low rounded-xl max-w-4xl w-full border border-outline-variant/50 shadow-2xl overflow-hidden flex flex-col max-h-[92vh]">
+      <div class="bg-surface-container px-space-lg py-space-md flex items-center justify-between border-b border-outline-variant/30">
+        <div class="flex items-center gap-space-xs font-mono-sm text-mono-sm text-primary font-semibold">
+          <span class="material-symbols-outlined text-[18px]">menu_book</span>
+          <span id="cs-modal-tag">CASE_STUDY // DEEP_DIVE</span>
+        </div>
+        <button id="close-case-study-btn" class="p-space-xs text-on-surface-variant hover:text-on-surface">
+          <span class="material-symbols-outlined text-[20px]">close</span>
+        </button>
+      </div>
+
+      <div class="p-space-xl overflow-y-auto space-y-space-lg text-on-surface font-body-md" id="cs-modal-content">
+        <!-- Injected via app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- CERTIFICATION VERIFICATION MODAL -->
+  <div id="cert-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-space-md bg-surface-container-lowest/80 backdrop-blur-md">
+    <div class="bg-surface-container-low rounded-xl max-w-md w-full border border-outline-variant/50 shadow-2xl overflow-hidden p-space-lg space-y-space-md">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-space-xs text-primary font-mono-sm text-mono-sm font-semibold">
+          <span class="material-symbols-outlined text-[20px]">verified</span>
+          <span>ATTESTATION VERIFIED</span>
+        </div>
+        <button id="close-cert-btn" class="p-space-2xs text-on-surface-variant hover:text-on-surface">
+          <span class="material-symbols-outlined text-[18px]">close</span>
+        </button>
+      </div>
+
+      <div class="space-y-space-xs bg-surface-container-lowest p-space-md rounded font-mono-sm text-mono-sm border border-outline-variant/30">
+        <div class="flex justify-between">
+          <span class="text-on-surface-variant">CREDENTIAL:</span>
+          <span class="text-on-surface font-semibold" id="cert-modal-name">MERN FullStack Development</span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-on-surface-variant">ISSUER:</span>
+          <span class="text-primary" id="cert-modal-issuer">Ethnus</span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-on-surface-variant">DATE ATTESTED:</span>
+          <span class="text-on-surface" id="cert-modal-date">07/2026</span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-on-surface-variant">HASH SIGNATURE:</span>
+          <span class="text-secondary font-label-code" id="cert-modal-hash">ETHNUS-MERN-072026</span>
+        </div>
+      </div>
+
+      <div class="p-space-xs rounded bg-primary/10 text-primary font-mono-sm text-[11px] flex items-center gap-space-2xs">
+        <span class="material-symbols-outlined text-[14px]">lock</span>
+        <span>Verified credential record for Govinda Das.</span>
+      </div>
+
+      <button id="dismiss-cert-btn" class="w-full py-space-xs bg-surface-container-high hover:bg-surface-bright text-on-surface font-mono-md text-mono-md rounded transition-colors">
+        Dismiss Attestation
+      </button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

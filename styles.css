@@ -1,0 +1,95 @@
+/* Custom Styles & Utilities for Akku Portfolio */
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    overscroll-behavior: none;
+    background-color: #111317;
+    color: #e2e2e6;
+  }
+}
+
+/* Custom Scrollbar - Sleek Dark Theme */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0c0e11;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #282a2d;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #333538;
+}
+
+/* Navigation Active Indicator */
+.nav-link.active {
+  color: #4edea3 !important;
+  font-weight: 600;
+}
+
+.mobile-nav-link.active {
+  color: #4edea3 !important;
+  font-weight: 600;
+}
+
+/* Node Highlight Animations */
+.pipeline-node.active-node {
+  border-color: #4edea3 !important;
+  background-color: rgba(78, 222, 163, 0.08) !important;
+  transform: translateX(4px);
+}
+
+.blueprint-node.active-bp {
+  border-color: #4edea3 !important;
+  background-color: rgba(78, 222, 163, 0.12) !important;
+}
+
+/* Modal Open Body Lock */
+body.modal-open {
+  overflow: hidden;
+}
+
+/* Code Snippet Prettifier */
+pre code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* Print Styles for Resume Modal */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #resume-modal, #resume-modal * {
+    visibility: visible;
+  }
+  #resume-modal {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  #resume-modal .bg-surface-container-low,
+  #resume-modal .bg-surface-container {
+    background: #ffffff !important;
+    color: #000000 !important;
+    border: none !important;
+  }
+  #resume-modal button {
+    display: none !important;
+  }
+}
