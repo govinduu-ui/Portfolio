@@ -178,8 +178,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  if (openResumeBtn) openResumeBtn.addEventListener('click', openResume);
-  if (heroResumeTrigger) heroResumeTrigger.addEventListener('click', openResume);
   if (profileAvatarBtn) profileAvatarBtn.addEventListener('click', openResume);
   if (closeResumeBtn) closeResumeBtn.addEventListener('click', closeResume);
 
