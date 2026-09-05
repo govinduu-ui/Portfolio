@@ -410,16 +410,35 @@ document.addEventListener('DOMContentLoaded', () => {
   const certModalIssuer = document.getElementById('cert-modal-issuer');
   const certModalDate = document.getElementById('cert-modal-date');
   const certModalHash = document.getElementById('cert-modal-hash');
+  const certModalStudent = document.getElementById('cert-modal-student');
+  const certModalImg = document.getElementById('cert-modal-img');
+  const certModalUrl = document.getElementById('cert-modal-url');
+  const certImgContainer = document.getElementById('cert-img-container');
   const closeCertBtn = document.getElementById('close-cert-btn');
   const dismissCertBtn = document.getElementById('dismiss-cert-btn');
   const verifyCertBtns = document.querySelectorAll('.verify-cert-btn');
 
-  function openCertModal(name, issuer, date, hash) {
+  function openCertModal(data) {
     if (certModal) {
-      if (certModalName) certModalName.textContent = name;
-      if (certModalIssuer) certModalIssuer.textContent = issuer;
-      if (certModalDate) certModalDate.textContent = date;
-      if (certModalHash) certModalHash.textContent = hash;
+      if (certModalName) certModalName.textContent = data.name || 'MERN Full Stack Certification Program';
+      if (certModalIssuer) certModalIssuer.textContent = data.issuer || 'Ethnus';
+      if (certModalDate) certModalDate.textContent = data.date || 'July 15, 2026';
+      if (certModalHash) certModalHash.textContent = data.id || 'GVT2JHWG';
+      if (certModalStudent) certModalStudent.textContent = `Govinda Das (${data.regNo || '24BCY10282'})`;
+
+      if (data.img && certModalImg) {
+        certModalImg.src = data.img;
+        if (certImgContainer) certImgContainer.classList.remove('hidden');
+      } else if (certImgContainer) {
+        certImgContainer.classList.add('hidden');
+      }
+
+      if (data.url && certModalUrl) {
+        certModalUrl.href = data.url;
+        certModalUrl.classList.remove('hidden');
+      } else if (certModalUrl) {
+        certModalUrl.classList.add('hidden');
+      }
 
       certModal.classList.remove('hidden');
       document.body.classList.add('modal-open');
@@ -436,11 +455,16 @@ document.addEventListener('DOMContentLoaded', () => {
   verifyCertBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
-      const name = btn.getAttribute('data-cert-name');
-      const issuer = btn.getAttribute('data-issuer');
-      const date = btn.getAttribute('data-date');
-      const hash = btn.getAttribute('data-cert-id');
-      openCertModal(name, issuer, date, hash);
+      const data = {
+        name: btn.getAttribute('data-cert-name'),
+        issuer: btn.getAttribute('data-issuer'),
+        date: btn.getAttribute('data-date'),
+        id: btn.getAttribute('data-cert-id'),
+        regNo: btn.getAttribute('data-reg-no'),
+        img: btn.getAttribute('data-cert-img'),
+        url: btn.getAttribute('data-verify-url')
+      };
+      openCertModal(data);
     });
   });
 
